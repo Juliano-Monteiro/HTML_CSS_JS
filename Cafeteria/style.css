@@ -1,0 +1,372 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #fde3d2;
+    height: 100vh;
+}
+header{
+    height: 100vh;
+    background-image: url(img/pexels-juanpphotoandvideo-894696.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: inset 0px -350px 450px #fde3d2;
+}
+footer{
+    height: 60vh;
+    background-image: url(img/pexels-juanpphotoandvideo-894696.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0px 350px 500px #fde3d2;
+}
+footer>p{
+    color: white;
+}
+#subtitulo{
+    color: #130E0B;
+}
+hr{
+    background-color: #130E0B;
+    border: none;
+    width: 50%;
+    height: 3px;
+    margin: 20px;
+}
+h1{
+    font-family: "Pinyon Script", cursive;
+    font-size: 9rem;
+    color: #130E0B;
+}
+h2{
+    font-family: "Pinyon Script", cursive;
+    font-size: 4rem;
+    color: #fd8617;
+}
+p{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+    font-size: 1.7rem;
+}
+header>p{
+    color: white;
+    margin-top: 20px;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+main{
+    padding: 0% 10% 0% 10%;
+}
+div{
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+.producao{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr;
+}
+.atendimento{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+}
+
+#img2,#img3{
+    margin-top: -60px;
+    height: auto;
+    width: 250px;
+    z-index: 1;
+    box-shadow: 15px 15px 0px #fd8617;
+}
+.producao>.texto{
+    grid-area: 1 / 1 / 1 / 2;
+}
+.div_img{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    height: 300px;
+}
+#img1{
+    margin-top: -100px;
+    height: auto;
+    width: 500px;
+}
+.grupo_img{
+    margin-top: 140px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 20% 80%;
+}
+.grupo_img>h2{
+    text-align: center;
+    grid-area: 1 / 1 / 2 / -1;
+}
+.grupo_img>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grupo_img>div>img{
+   height: 100%;
+   width:   90%;
+   box-shadow: 5px 5px 20px rgba(63, 63, 63, 0.432);
+}
+.contato{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+
+}
+.texto_contato>h2{
+    text-align: center;
+    color: #130E0B;
+    font-size: 4rem;
+}
+.texto_contato>ul{
+    list-style: none;
+}
+li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px;
+    text-align: center;
+}
+li>p{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    height: 40px;
+    width: auto;
+    color: #fd8617;
+}
+.mini{
+    width: 60px;
+    height: 60px;
+    background-color: #fd8617;
+    margin: 0;
+    padding: 36px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+.icons{
+    width: 45px;
+    height: auto;
+}
+
+@media(width<=1200px){
+    h2{
+        font-size: 3.5rem;
+    }
+    p{
+        font-size: 1.5rem;
+    }
+    .texto_contato>h2{
+        font-size: 3rem;
+    }
+    li>p{
+        font-size: 1.6rem;
+    }
+    .mini{
+        width: 50px;
+        height: 50px;
+        padding: 34px;
+    }
+    .icons{
+        width: 35px;
+    }
+}
+@media(width<=992px){
+    h2{
+        font-size: 3rem;
+    }
+    p{
+        font-size: 1.2rem;
+    }
+    .texto_contato>h2{
+        font-size: 2.6rem;
+    }
+    li>p{
+        font-size: 1.5rem;
+    }
+    .mini{
+        width: 40px;
+        height: 40px;
+        padding: 30px;
+    }
+    .icons{
+        width: 30px;
+    }   
+}
+@media (width<=870px){
+    h1{
+        font-size: 5rem;
+    }
+    header>p{
+        font-size: 1.5rem;
+    }
+    .producao{
+        grid-template-rows: 1fr 1fr;
+    }
+    .producao>.texto,.atendimento>.texto{
+        grid-area:  1 / 1 / 2 / -1;
+        margin: 0;
+    }
+    .producao>.div_img{
+        grid-area: 2 / 1 / -1 / -1;
+        margin: -20px 0px 100px 0px;
+        width: 100%;
+    }
+    #img1{
+        width: 70%;
+    }
+    .atendimento{
+        grid-template-rows: 1fr 1fr;
+    }
+    .atendimento>.div_img{
+        grid-area: 2 / 1 / -1 / -1;
+        margin: 0px 0px 60px 0px;
+    }
+    .grupo_img{
+        margin-top: 140px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 20% 40% 40%;
+    }
+    .grupo_img>h2{
+        text-align: center;
+        grid-area: 1 / 1 / 2 / -1;
+        margin: 0px;
+        padding: 0px;
+        font-size: 3.5rem;
+    }
+    .grupo_img>div{
+        margin: 0px 0px 80px 0px;
+    }
+    .grupo_img>div>img{
+       height: 120%;
+       width:   90%;
+    }
+    .texto_contato>h2{
+        font-size: 2rem;
+    }
+    #img3{
+        width: 180px;
+    }
+    li>p{
+        font-size: 1.3rem;
+    }
+    .mini{
+        width: 40px;
+        height: 40px;
+        padding: 25px;
+    }
+    .icons{
+        width: 25px;
+    }
+    footer>p{
+        color: #130E0B;
+    }
+}
+@media(width<=576px){
+    div{
+        margin: 0;
+    }
+    h1{
+        font-size: 4rem;
+    }
+    h2{
+        font-size: 2.3rem;
+    }
+    p{
+        font-size: 1.2rem;
+    }
+    header{
+        height: 60vh;
+        background-position: center;
+        box-shadow: inset 0px -260px 400px #fde3d2;
+
+    }
+    header>p{
+        font-size: 1.3rem;
+    }
+    .producao{
+        grid-template-rows: 1fr 1fr;
+    }
+    .producao>.texto,.atendimento>.texto{
+        grid-area:  1 / 1 / 2 / -1;
+        margin: 0;
+    }
+    .producao>.div_img{
+        grid-area: 2 / 1 / -1 / -1;
+        margin: -20px 0px 100px 0px;
+        width: 100%;
+    }
+    .producao>.div_img{
+        grid-area: 2 / 1 / -1 / -1;
+        margin: 60px 0px 130px 0px;
+        width: 100%;
+    }
+    #img1{
+        width: 70%;
+    }
+    #img2{
+        width: 230px;
+        margin-top:-40px;
+    }
+    .grupo_img>h2{
+        font-size: 2.5rem;
+    }
+    .texto_contato{
+        margin-top: 50px;
+    }
+    .texto_contato>h2{
+        font-size: 1.2rem;
+    }
+    #img3{
+        width: 130px;
+        margin-right: 10px;
+    }
+    li>p{
+        font-size: .8rem;
+    }
+    li:nth-child(3)>p{
+        font-size: .7rem;
+    }
+    .mini{
+        width: 35px;
+        height: 35px;
+        padding: 15px;
+        margin-right: 2px;
+    }
+    .icons{
+        width: 20px;
+
+    }
+    footer>p{
+        font-size: .5rem;
+    }
+    footer{
+        box-shadow: inset 0px 250px 200px #fde3d2;
+        height: 40vh;
+    }
+}
