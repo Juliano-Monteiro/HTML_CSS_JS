@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="pesquisa">CODIGO:</label>
+    <input type="text" class="pesquisa" id="pesquisa">
+    <button class="enviar"> ></button>
+    <br>
+    <h1>Cardapio</h1>
+    <p class="resposta"></p>
+    <script>
+        let btn = document.querySelector(".enviar");
+        let matriz = [["Cachorro Quente",100,1.20],
+                      ["Frango Assado",101,3.0],
+                      ["Saduiche",102,10.0]];
+        btn.addEventListener("click", function (){
+            let resposta = document.querySelector(".resposta");
+            let img = "";
+            let cod  = document.querySelector(".pesquisa").value;
+            for(let i = 0; i<3;i++){
+                for(let j = 0; j<3;j++){
+                    if(cod==matriz[i][j]){
+                        
+                        img = matriz[i][j-1]+" "+matriz[i][j]+" "+matriz[i][j+1];
+                    }
+                    if(cod==""){
+                        img += matriz[i][j]+" ";
+                    }
+                    
+                }
+                img+="<br />";
+            }
+            resposta.innerHTML = img; 
+        });
+    </script>
+</body>
+</html>
