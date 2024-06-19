@@ -6,10 +6,15 @@
 ##O que você vai encontrar aqui?🤔
 
 +CSS intermediario
+
 +Inserção de elementos via JavaScript
+
 +Eventos em JavaScript
+
 +Site de uma cafeteria ficticia
+
 +Sistema de lista
+
 +Frameworks úteis
 
 ##Links referentes aos projetos desse repositorio💻
