@@ -16,6 +16,7 @@ btnAdd.addEventListener("click",()=>{
 
 function addLista(conteudo){
     //função que adiciona elementos na lista
+    inputList.value = "";
     count++;
     console.log(count);
     divSaida.style.visibility="visible";
