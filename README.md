@@ -5,18 +5,13 @@
 
 ##O que você vai encontrar aqui?🤔
 
-+CSS intermediario
+- CSS intermediario
+- Inserção de elementos via JavaScript
++ Eventos em JavaScript
++ Site de uma cafeteria ficticia
++ Sistema de lista
++ Frameworks úteis
 
-+Inserção de elementos via JavaScript
-
-+Eventos em JavaScript
-
-+Site de uma cafeteria ficticia
-
-+Sistema de lista
-
-+Frameworks úteis
-
-##Links referentes aos projetos desse repositorio💻
+## Links referentes aos projetos desse repositorio💻
 
 [Cafeteria Coffee Haven](https://juliano-monteiro.github.io/HTML_CSS_JS/Cafeteria/)
