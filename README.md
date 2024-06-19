@@ -15,5 +15,7 @@
 ## Links referentes aos projetos desse repositorio💻
 
 [Cafeteria Coffee Haven](https://juliano-monteiro.github.io/HTML_CSS_JS/Cafeteria/)
+
 [Sistema de Lista](https://juliano-monteiro.github.io/HTML_CSS_JS/Sistema%20de%20lista/)
+
 [Vetor de Planos](https://juliano-monteiro.github.io/HTML_CSS_JS/Premium%20Vector/)
