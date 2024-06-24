@@ -38,7 +38,7 @@ function main(){
             if(pergunta.value == 3){
                 setTimeout(() => {
                     boot.src = "imagens/img (7).jpg";
-                    texto.innerHTML = "Ferlandia, o Juliano está muito afim de você, você é incrivel e ele quer que vocês dêen certo! Ei ele te acha muito gatinha também rsrs<br /><br /> <ul><li>1 Tudo bem Osvaldo?</li><li>2 Como foi o seu dia?</li><li>3 Me conta um segredo?</li><li>0 Tchau Osvaldo</li></ul>";
+                    texto.innerHTML = "Sem segredos<br /><br /> <ul><li>1 Tudo bem Osvaldo?</li><li>2 Como foi o seu dia?</li><li>3 Me conta um segredo?</li><li>0 Tchau Osvaldo</li></ul>";
                 }, 500);
             }
             if(pergunta.value == 0){
