@@ -59,7 +59,9 @@ for(let i in bloco){
         inicia(i,bloco[i].getAttribute("src"));
         vitoria=verificaVitoria();
         if(vitoria!=""){
-            alert("vencedor "+vitoria+"!!!");
+            let venceu  = "";
+            vitoria==="imgs/x.png"?venceu="X":venceu="O";
+            alert("vencedor "+venceu+"!!!");
         }
     });
     
