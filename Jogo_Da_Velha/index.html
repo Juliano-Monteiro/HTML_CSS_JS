@@ -10,8 +10,8 @@
     <div class="container">
         <header>
             <h1>Jogo da Velha<span> JMS</span></h1>
-            <p id="payer1">Vez do X</p>
-            <p id="payer2">Vez do O</p>
+            <div id="payer1" class="players"><p class="payervez">Vez do X</p></div>
+            <div id="payer2" class="players"><p class="">Vez do O</p></div>
         </header>
         <main>
             <div class="subcontainer">
@@ -26,6 +26,15 @@
                 <img src="imgs/-.png" alt="" class="bloco">
             </div>
         </main>
+        <section class="popup">
+            <div class="header_popup">
+                <h2>Vitoria!!!</h2>
+                <h3>Jogador X</h3>
+            </div>
+            <div class="button_popup">
+                <button id="btn_reinicio">Recomeçar</button>
+            </div>
+        </section>
     </div>
 </body>
 <script src="index.js"></script>

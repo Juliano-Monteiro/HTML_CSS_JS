@@ -1,16 +1,42 @@
 let bloco = document.querySelectorAll(".bloco");
 let jogador = "x";
+let jogadores = document.querySelectorAll(".players");
+let popup = document.querySelector(".popup");
+let btn_reinicio = document.querySelector("#btn_reinicio");
+//
+////
+////// alert(jogadores[0].firstElementChild)
 let cont = 0;
 let vitoria = "";
-//eu estou pegando tudo em forma de array simples, mas para fazer uma verificação melhro, tenho que colocar tudo em uma matriz
+//
+////
+////// Eu estou pegando tudo em forma de array simples, mas para fazer uma verificação melhro, tenho que colocar tudo em uma matriz
 let matriz = [
     ["","",""],
     ["","",""],
     ["","",""]
 ];
-//adicionando os elementos a matriz
+//
+////
+////// Quando o jogo acabar, poder reiniciar a partida atravez do acionamento do botão do popup
+btn_reinicio.addEventListener("click",()=>{
+    // Zera a matriz
+    for(let i = 0 ; i <3 ; i++){
+        for(let j = 0 ; j <3 ; j++){
+            matriz[i][j] = "";
+        }
+    }
+    // deixa o popup invisivel
+    popup.style.visibility = "hidden";
+    // Altera a imagem de todos os blocos
+    for(let i in bloco){
+        bloco[i].setAttribute("src","imgs/-.png");
+    } 
+});
+//
+////
+////// Adicionando os elementos a matriz
 function inicia(i,element){
-    console.log(i,bloco[i].getAttribute("src"));
     switch(i){
         case "0":
             matriz[0][0] = element;
@@ -39,21 +65,25 @@ function inicia(i,element){
         default:
             matriz[2][2] = element;
     }
-    console.log(matriz);
 }
+//
+////
+////// Pegando todos os blocos do jogo da velha
 for(let i in bloco){
-    
-    bloco[i].addEventListener("click",()=>{
+        bloco[i].addEventListener("click",()=>{
         let fundo = bloco[i];
         if(fundo.getAttribute("src")==="imgs/-.png"){
             if(jogador==="x"){
                 fundo.setAttribute("src","imgs/x.png");
                 jogador = "o";
+                jogadores[0].firstElementChild.classList.remove("payervez");
+                jogadores[1].firstElementChild.classList.add("payervez");
             }
             else{
                 fundo.setAttribute("src","imgs/o.png");
                 jogador = "x";
-
+                jogadores[1].firstElementChild.classList.remove("payervez");
+                jogadores[0].firstElementChild.classList.add("payervez");
             }
         }
         inicia(i,bloco[i].getAttribute("src"));
@@ -61,12 +91,15 @@ for(let i in bloco){
         if(vitoria!=""){
             let venceu  = "";
             vitoria==="imgs/x.png"?venceu="X":venceu="O";
-            alert("vencedor "+venceu+"!!!");
-        }
+            popup.firstElementChild.lastElementChild.innerHTML = "Jogador "+venceu;
+            popup.style.visibility = "visible";
+        }   
     });
     
 }
-
+//
+////
+////// Verificação de vitoria
 function verificaVitoria(){
         for(let f=0;f<3;f++){
             //verifica linhas
@@ -88,3 +121,6 @@ function verificaVitoria(){
         //se nada for verdade ele só retorna o vazio
         return "";
 }
+//
+////
+////// Recomeço do jogo
