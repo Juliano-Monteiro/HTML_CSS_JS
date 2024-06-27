@@ -51,15 +51,62 @@ h1{
 main{
     width: 100%;
     height: 80%;
-    background-color: rgb(167, 255, 174);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .subContainer{
-    background-color: rgb(255, 255, 255);
-    width: 80%;
-    height: 80%;
+    width: auto;
+    height: auto;
     display: grid;
     gap: 1rem;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
+}
+/** Horizontal -> left **/
+.flip:hover .card-inner {
+    transform: rotateY(-180deg);
+}
+
+.flip .card-front {
+    transform: rotateY(-180deg);
+}
+
+
+/* The flip card container - set the width and height to whatever you want*/
+.card {
+    background-color: transparent;
+    width: 100px;
+    height: 150px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+/* This container is needed to position the front and back side */
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+  
+/* Position the front and back side */
+ 
+.card-back,.card-front{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+/* It fits the image in the container */
+.card-front img,
+.card-back img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
 }
