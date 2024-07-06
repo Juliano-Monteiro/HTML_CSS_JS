@@ -2,7 +2,7 @@ const grid = document.querySelector(".subContainer");
 let tentativas = document.querySelector(".dados").firstElementChild;
 let numtentativas = 0;
 const personagens = [
-    "frente 1",
+    "primeira",
     "frente 2",
     "frente 3",
     "frente 4",
