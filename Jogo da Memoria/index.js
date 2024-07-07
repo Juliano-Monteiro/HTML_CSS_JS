@@ -1,5 +1,12 @@
 const grid = document.querySelector(".subContainer");
 let tentativas = document.querySelector(".dados").firstElementChild;
+let time = document.querySelector("span");
+const popup = document.querySelector(".popup");
+let dados_popup = document.querySelector(".dados_popup");
+let btn = document.querySelector(".btn_restart");
+let ss = 0;
+let min = 0;
+var interval;
 let numtentativas = 0;
 const personagens = [
     "primeira",
@@ -22,7 +29,13 @@ const checkEndGame = () => {
     const disabledCards = document.querySelectorAll('.desailitado');
   
     if (disabledCards.length === 16) {
-      window.location.reload(true);
+        clearInterval(interval);
+        popup.style.visibility = "visible";
+        dados_popup.firstElementChild.innerHTML = tentativas.innerHTML;
+        dados_popup.lastElementChild.innerHTML = "Tempo: "+time.innerHTML;
+        btn.addEventListener("click",()=>{
+            window.location.reload(true);
+        });
     }
   }
 const verificaCarta = ()=>{
@@ -76,7 +89,21 @@ const criarCarta = (personagem)=>{
     });
     return card;
 }
-
+function twoDigits(digit){
+    if(digit<10){
+        return('0'+digit)
+    }else{
+        return(digit)
+    }
+}
+function playTime(){
+    ss++;
+    if(ss===60){
+        ss=0;
+        min++;
+    }
+    time.innerHTML= twoDigits(min)+":"+twoDigits(ss);
+}
 const loadGame = ()=>{
     const duplicarArray = [ ...personagens,...personagens ];
     const embaralhar = duplicarArray.sort(() => Math.random() - 0.5); //serve para ordenar os itens de um array conforme o retorno de uma função
@@ -85,5 +112,7 @@ const loadGame = ()=>{
         const card = criarCarta(personagem);
         grid.appendChild(card);
     });
+    playTime();
+    interval=setInterval(playTime,1000);
 }
 loadGame();
