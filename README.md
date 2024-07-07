@@ -17,6 +17,8 @@
 [Cafeteria Coffee Haven](https://juliano-monteiro.github.io/HTML_CSS_JS/Cafeteria/)
 
 [Jogo da Velha](https://juliano-monteiro.github.io/HTML_CSS_JS/Jogo_Da_Velha/)
+
+[Jogo da Memoria](https://juliano-monteiro.github.io/HTML_CSS_JS/Jogo da Memoria/)
  
 [Boot Osvaldo](https://juliano-monteiro.github.io/HTML_CSS_JS/Sistemas%20simples%20extras%20JS/Boot/)
 
