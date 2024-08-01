@@ -1,0 +1,546 @@
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    z-index: -2;
+}
+:root{
+    font-size: 62.5%;
+}
+body{
+    width: 100%;
+    height: 100vh;
+
+}
+header{
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+}
+main{
+    z-index: -3;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    
+}
+/*_____________________________________________________________________*/
+
+.background1{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgb(2,15,30);
+    background: linear-gradient(180deg, rgba(2,15,30,1) 0%, rgba(11,41,130,1) 100%);
+    z-index: -9;
+}
+.divisor1{
+    width: 100%;
+    height: 100%;
+
+    background-image: url(imgs/super.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0%;
+    z-index: -2;
+}
+.background1_img_1{
+    width: 250px;
+    height: 350px;
+    border-radius: 18px;
+    position: absolute;
+    background-image: url(imgs/mohammad-rahmani-DwDZ5mgwhsc-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -3;
+    top: 50%;
+    right: 25%;
+}
+.background1_img_2{
+    width: 250px;
+    height: 350px;
+    border-radius: 18px;
+    position: absolute;
+    background-image: url(imgs/mikhail-fesenko-Uk5KhhSdpk0-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -3;
+    top: 25%;
+    right: 16%;
+}
+.projetos_container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 25%;
+}
+.fundo2{
+    position: absolute;
+    width: 100%;
+    height: 125%;
+    top: 0%;
+    z-index: -3;
+    background: rgb(10,39,123);
+    background: linear-gradient(180deg, rgba(10,39,123,1) 0%, rgba(17,192,189,1) 100%);
+}
+.SUBS{
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+}
+.divisor2{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background-image: url(imgs/divisor2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -8;
+}
+.divisor3{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background-image: url(imgs/super.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 0%;
+    z-index: -8;
+}
+
+
+
+
+
+
+
+
+/*_____________________________________________________________________*/
+
+.header-desktop{
+    z-index: -1;
+    position: relative;
+    background: #03122A;
+    width: 100%;
+    height: 100%;
+    color: white;
+    padding: 2rem 9rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+
+}
+.navbar{
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    width: 80%;
+    justify-content: end;
+    align-items: center;
+}
+li{
+    padding: 1rem 2rem;
+    font-family: "Staatliches", sans-serif;
+    font-size: 2.5rem;
+}
+#contato_link{
+    background-color: #17FFDC;
+}
+h1,h2,h3{
+    font-family: "Staatliches", sans-serif;
+}
+h1{
+    font-size: 6.1rem;
+}
+h2{
+    font-size: 4.9rem;
+}
+h3{
+    font-size: 3.9rem;
+}
+p{
+    font-size: 2rem;
+    font-family: "Roboto", sans-serif;
+    text-align: justify;
+    color: #18191E;
+}
+
+span{
+    color: #17FFDC;
+}
+
+
+
+/* parte do main */
+
+.complemento_header{
+    color: white;
+    padding-top: 15rem;
+    width: 120rem;
+    display: flex;
+    flex-direction: column;
+    margin-left: 4.5rem;
+    margin-bottom: 60rem;
+    z-index: -3;
+}
+.complemento_header>h1{
+    font-size: 8rem;
+}
+.complemento_header>p{
+    width: 109rem;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 2.5rem;
+}
+.span2{
+    color: #11C0BD;
+}
+.btn_speak_me{
+    background: rgb(17,192,189);
+    background: linear-gradient(90deg, rgba(17,192,189,1) 0%, rgba(8,90,89,1) 100%);
+    font-size: 3.9rem;
+    color: white;
+    font-family: "Staatliches", sans-serif;
+    border-radius: 8px;
+    width: 28.6rem;
+    height: 6.8rem;
+    outline: none;
+    cursor: pointer;
+}
+
+
+/* sobre mim */
+.sobre_mim{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    margin-bottom: 30rem;
+}
+.titulo>h2{
+    color: #061441;
+}
+.sobre{
+    display: flex;
+    gap: 20px;
+}
+.sobre>.texto_sobre{
+    width: 1000px;
+}
+.texto_sobre>P{
+    font-size: 2.5rem;
+}
+#my_name{
+    font-size: 3rem;
+    font-family: "Staatliches", sans-serif;
+    color: #061441;
+}
+.img_me{
+    width: 500px;
+    height: 500px;
+    background-image: url(imgs/IMG_20240404_171058.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 17px;
+}
+
+
+/* linguagens de programação */
+.linguagens{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10rem;
+    margin-bottom: 30rem;
+}
+.linguagens>.titulo>h2{
+    text-align: center;
+    
+}
+.icons_code{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: fit-content;
+    gap: 12rem;
+}
+.imgs_icons{
+    width: 15rem;
+    height: 15rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#img1{
+    background-image: url("imgs/0_eFomJUFua8tuqe8g.png");
+
+}
+#img2{
+    background-image: url("imgs/javascript.png");
+    background-size: cover;
+}
+#img3{
+    background-image: url("imgs/732212.png");
+    background-size: cover;
+}
+#img4{
+    background-image: url("imgs/css.png");
+    background-size: cover;
+}
+#img5{
+    background-image: url("imgs/68747470733a2f2f676574626f6f7473747261702e636f6d2f646f63732f352e322f6173736574732f6272616e642f626f6f7473747261702d6c6f676f2d736861646f772e706e67.png");
+    background-size: cover;
+}
+#img6{
+    background-image: url("imgs/python\ \(1\).png");
+    background-size: contain;
+}
+#img7{
+    background-image: url("imgs/PHP-logo.svg.png");
+    background-size: contain;
+}
+#img8{
+    background-image: url("imgs/MySQL-Logo.png");
+    background-size: contain;
+}
+#img9{
+    background-image: url("imgs/c-program-icon.png");
+    background-size: contain;
+}
+
+.projetos{
+    padding: 0rem 5rem;
+    padding-top: 40rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+.projetos>.titulo>h2{
+    color: #17FFDC;
+    text-align: center;
+}
+.project_grup{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+.section_porject{
+    width: 80%;
+    height: 415px;
+    background-color: white;
+    padding: 20px 8rem;
+    border-radius: 50px;
+    box-shadow: 6px 10px 20px rgba(0, 0, 0, 0.311);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 5rem;
+}
+.img_project{
+    width: 50rem;
+    height: fit-content;
+}
+.img_project>img{
+    width: 100%;
+    height: auto;
+}
+.text_project{
+    width: 80rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.text_project>h3{
+    color: #061441;
+}
+.text_project>p{
+    color: #18191E;
+}
+.btn_ver{
+    width: fit-content;
+    padding: 1rem 6rem;
+    background-color: #061441;
+    color: #17FFDC;
+    font-family: "Staatliches", sans-serif;
+    letter-spacing: 2px;
+    font-size: 1.6rem;
+    box-shadow: 3px 4px 20px -5px rgba(40, 40, 40, 0.734);
+    border-radius: 0.5rem;
+    transition: .4s all ease-in-out;
+    cursor: pointer;
+}
+.btn_ver:hover{   
+    background-color: #17FFDC;
+    color: #061441;
+    box-shadow: 0px 0px 20px rgba(152, 255, 248, 0.716);
+}
+
+
+
+/* parte destinada a mensagem */
+/* 11C0BD */
+.mensage{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0% 20%;
+    gap: 2rem;
+    margin-bottom: 5rem;
+}
+.mensage>h2{
+    color: #11C0BD;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.mensage>label{
+    font-size: 3rem;
+    font-family: "Staatliches", sans-serif;
+    color: #061441;
+}
+.mensage>input{
+    width: 100%;
+    outline: none;
+    box-shadow: 4px 4px 20px #54505059;
+    padding: 1.5rem;
+    font-size: 2rem;
+    border-radius: 13px;
+    color: #061441;
+    font-family: "Roboto", sans-serif;
+}
+.mensage>textarea{
+    width: 100%;
+    height: 40rem;
+    box-shadow: 4px 4px 20px #54505059;
+    outline: none;
+    padding: 1.5rem;
+    border-radius: 13px;
+    font-size: 2rem;
+    font-family: "Roboto", sans-serif;
+    resize: none;
+}
+.buttons_mensage{
+    height: 5rem;
+    width: fit-content;
+    display: flex;
+    gap: 20px;
+}
+.buttons_mensage>button{
+    width: 20rem;
+    border-radius: 0.5rem;
+    font-size: 2rem;
+    font-family: "Staatliches", sans-serif;
+    color: #17FFDC;
+    background-color: #061441;
+    box-shadow: 3px 4px 10px rgba(73, 73, 73, 0.405);
+    cursor: pointer;
+    transition: .2s all ease-in-out;
+}
+.buttons_mensage>button:nth-child(2){
+    color: #FF4F17;
+}
+.buttons_mensage>button:hover{
+    background-color: #17FFDC;
+    color: #061441;
+}
+.buttons_mensage>button:nth-child(2):hover{
+    background-color: #FF4F17;
+}
+
+
+/* estilização do footer */
+
+footer{
+    width: 100%;
+    height: 90rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+.fundo3{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -8;
+    background: rgb(17,183,186);
+    background: linear-gradient(180deg, rgba(17,183,186,1) 0%, rgba(0,255,217,1) 100%);
+}
+.divisor4{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(imgs/divisor2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -8;
+}
+.contas{
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 6rem;
+}
+.img_footer{
+    width: 35rem;
+    height: 35rem;
+    background-image: url(imgs/olga-nayda-1-tyBukRx5o-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 2rem;
+}
+.contas_inner{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: start;
+}
+.inside-conta{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+.img_conta{
+    width: 8rem;
+    height: 8rem;
+    background-color: white;
+    border-radius: 5rem;
+}
+.img_conta>img{
+    width: 100%;
+    height: 100%;
+
+}
+.inside-conta>p{
+    color: #061441;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+}
+footer>p{
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-family: "Staatliches", sans-serif;
+}
