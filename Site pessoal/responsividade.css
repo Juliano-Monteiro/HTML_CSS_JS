@@ -1,0 +1,1031 @@
+@media(width<=1670px){
+    .background1_img_1{
+        width: 250px;
+        height: 350px;
+        right: 15%;
+    }
+    .background1_img_2{
+        width: 250px;
+        height: 350px;
+        right: 5%;
+    }
+    .divisor2{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-size: contain;
+    }
+    .divisor3{
+        position: absolute;
+        width: 100%;
+        height: 40%;
+    }
+}
+@media(width<=1600px){
+    .background1_img_1{
+        width: 230px;
+        height: 330px;
+        right: 16%;
+        top: 45%;
+    }
+    .background1_img_2{
+        width: 230px;
+        height: 330px;
+        right: 8%;
+        top: 20%;
+    }
+    .divisor2{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-size: contain;
+    }
+    .divisor3{
+        position: absolute;
+        width: 100%;
+        height: 40%;
+    }
+    /* .header-desktop{
+    } */
+    .navbar{
+        gap: 1rem;
+        width: 50%;
+    }
+    li{
+        font-size: 2.3rem;
+    }
+    h3{
+        font-size: 3rem;
+    }
+    .complemento_header{
+        padding-top: 0rem;
+        width: 100rem;
+        margin-bottom: 45rem;
+    }
+    .complemento_header>h1{
+        font-size: 7rem;
+    }
+    .complemento_header>p{
+        width: 96rem;
+        font-size: 2.2rem;
+    }
+    .btn_speak_me{
+        font-size: 3rem;
+        width: 25rem;
+        height: 6rem;
+    }
+
+    .sobre_mim{
+        width: 100%;
+        gap: 10rem;
+        margin-bottom: 25rem;
+    }
+    .sobre{
+        display: flex;
+        gap: 20px;
+    }
+    .sobre>.texto_sobre{
+        width:900px;
+    }
+    .texto_sobre>P{
+        font-size: 2.2rem;
+    }
+    #my_name{
+        font-size: 2.5rem;
+    }
+    .img_me{
+        width: 400px;
+        height: 400px;
+    }
+
+
+    .linguagens{
+        width: 100%;
+        margin-bottom: 15rem;
+    }
+    .linguagens>.titulo>h2{
+        text-align: center;
+    }
+    .imgs_icons{
+        width: 10rem;
+        height: 10rem;
+    }
+    .mensage{
+        margin-top: 50rem;
+        margin-bottom: 8rem;
+    }
+    .img_conta{
+        width: 6rem;
+        height: 6rem;
+    }
+    .inside-conta>p{
+        font-size: 2.5rem;
+    }
+}
+@media(width<=1500px){
+    .background1_img_1{
+        width: 200px;
+        height: 300px;
+        right: 12%;
+        top: 52%;
+    }
+    .background1_img_2{
+        width: 200px;
+        height: 300px;
+        right: 4%;
+        top: 30%;
+    }
+    
+}
+@media(width<=1400px){
+    .divisor3{
+        height: 30%;
+    }
+    .background1_img_1{
+        width: 200px;
+        height: 300px;
+        right: 12%;
+        top: 52%;
+    }
+    .background1_img_2{
+        width: 200px;
+        height: 300px;
+        right: 4%;
+        top: 30%;
+    }
+    .complemento_header{
+        margin-top: 12rem;
+        width: 100rem;
+    }
+    .complemento_header>h1{
+        font-size: 6rem;
+    }
+    .complemento_header>p{
+        width: 82rem;
+        font-size: 1.9rem;
+    }
+    .btn_speak_me{
+        font-size: 2.5rem;
+        width: 22rem;
+        height: 5.5rem;
+    }
+    .sobre_mim{
+        width: 100%;
+        gap: 10rem;
+        margin-bottom: 25rem;
+    }
+    .sobre{
+        display: flex;
+        gap: 20px;
+    }
+    .sobre>.texto_sobre{
+        width:800px;
+    }
+    .texto_sobre>P{
+        font-size: 2rem;
+    }
+    #my_name{
+        font-size: 2.5rem;
+    }
+    .img_me{
+        width: 350px;
+        height: 350px;
+    }
+    h2{
+        font-size: 4rem;
+    }
+    h3{
+        font-size: 3rem;
+    }
+    p{
+        font-size: 1.8rem;
+    }
+    .section_porject{
+        width: 100%;
+        height: 415px;
+        padding: 20px 8rem;
+    }
+    .img_project{
+        width: 50rem;
+        height: fit-content;
+    }
+    .text_project{
+        width: 80rem;
+        gap: 1.5rem;
+    }    
+}
+@media(width<=1230px){
+    .divisor3{
+        height: 30%;
+    }
+    .background1_img_1{
+        width: 200px;
+        height: 300px;
+        right: 12%;
+        top: 52%;
+    }
+    .background1_img_2{
+        width: 200px;
+        height: 300px;
+        right: 4%;
+        top: 30%;
+    }
+    .complemento_header{
+        margin-top: 12rem;
+        width: 100rem;
+    }
+    .complemento_header>h1{
+        font-size: 6rem;
+    }
+    .complemento_header>p{
+        width: 82rem;
+        font-size: 1.9rem;
+    }
+    .btn_speak_me{
+        font-size: 2.5rem;
+        width: 22rem;
+        height: 5.5rem;
+    }
+
+
+    .linguagens{
+        width: 100%;
+        margin-bottom: 14rem;
+    }
+    .imgs_icons{
+        width: 8rem;
+        height: 8rem;
+    }
+    .icons_code{
+        gap: 10rem;
+    }
+
+    label{
+        font-size: 1rem;
+    }
+
+    h2{
+        font-size: 3.5rem;
+    }
+    h3{
+        font-size: 2.9rem;
+    }
+    .sobre_mim{
+        width: 100%;
+        gap: 10rem;
+        margin-bottom: 20rem;
+    }
+    .sobre{
+        display: flex;
+        gap: 20px;
+    }
+    .sobre>.texto_sobre{
+        width:650px;
+    }
+    .texto_sobre>P{
+        font-size: 1.8rem;
+    }
+    #my_name{
+        font-size: 2.2rem;
+    }
+    .img_me{
+        width: 330px;
+        height: 330px;
+    }
+    .mensage{
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+    }
+    .mensage>label{
+        font-size: 2.5rem;
+    }
+    .mensage>input{
+        width: 100%;
+        outline: none;
+        box-shadow: 4px 4px 20px #54505059;
+        padding: 1.5rem;
+        font-size: 1.5rem;
+        border-radius: 13px;
+        color: #061441;
+        font-family: "Roboto", sans-serif;
+    }
+    .mensage>textarea{
+        padding: 1.5rem;
+        border-radius: 13px;
+        font-size: 1.5rem;
+    }
+
+    .buttons_mensage{
+        height: 4.5rem;
+        gap: 15px;
+    }
+    .buttons_mensage>button{
+        width: 18rem;
+        border-radius: 0.5rem;
+        font-size: 1.8rem;
+    }
+
+    .divisor4{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url(imgs/divisor2.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        z-index: -8;
+    }
+}
+@media(width<=1170px){
+    .background1_img_1{
+        width: 160px;
+        height: 260px;
+        right: 12%;
+        top: 50%;
+    }
+    .background1_img_2{
+        width: 160px;
+        height: 260px;
+        right: 5%;
+        top: 33%;
+    }
+    .complemento_header{
+        margin-top: 12rem;
+        width: 80rem;
+    }
+    .complemento_header>h1{
+        font-size: 5.5rem;
+    }
+    .complemento_header>p{
+        width: 75rem;
+        font-size: 1.73rem;
+    }
+    .btn_speak_me{
+        font-size: 2.2rem;
+        width: 20rem;
+        height: 5.3rem;
+    }
+
+    .divisor1{
+        width: 100%;
+        height: 70%;
+    
+        background-image: url(imgs/super.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        top:  20%;
+        z-index: -2;
+    }
+    .background1{
+        width: 100%;
+        height: 90%;
+        position: absolute;
+        background: rgb(2,15,30);
+        background: linear-gradient(180deg, rgba(2,15,30,1) 0%, rgba(11,41,130,1) 100%);
+        z-index: -9;
+    }
+}
+@media(width<=1060px){
+    .img_me{
+        width: 300px;
+        height: 300px;
+        border-radius: 100%;
+        margin-bottom: 5rem;
+        box-shadow: 5px 6px 25px -1px rgba(75, 75, 75, 0.418);
+    }
+    .sobre_mim{
+        width: 100%;
+        gap: 5rem;
+        margin-bottom: 20rem;
+    }
+    .sobre{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .sobre>.texto_sobre{
+        width:700px;
+    }
+    .texto_sobre>P{
+        font-size: 2rem;
+    }
+    #my_name{
+        font-size: 2.5rem;
+    }
+
+    .complemento_header{
+        margin-top: 15rem;
+        width: 75rem;
+    }
+    .complemento_header>h1{
+        font-size: 4.6rem;
+    }
+    .complemento_header>p{
+        width: 63rem;
+        font-size: 1.5rem;
+    }
+    .btn_speak_me{
+        font-size: 2.3rem;
+        width: 21rem;
+        height: 5rem;
+    }
+    .navbar{
+        gap: 1rem;
+        width: 70%;
+    }
+    li{
+        font-size: 2.3rem;
+    }
+    h3{
+        font-size: 2.5rem;
+    }
+}
+@media(width<=1000px){
+    .mensage{
+        gap: 1rem;
+        margin-bottom: 3rem;
+        padding: 0% 10%;
+    }
+    .section_porject{
+        width: 80%;
+        height: fit-content;
+        padding: 5rem 1rem;
+        flex-direction: column;
+    }
+    .img_project{
+        width: 40rem;
+        height: fit-content;
+    }
+    .text_project{
+        width: 90%;
+        gap: 1.5rem;
+    }
+    .projetos{
+        padding: 0rem 5rem;
+        padding-top: 30rem;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+    .projetos>.titulo>h2{
+        color: #17FFDC;
+        text-align: center;
+    }
+    .project_grup{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+    }
+    .fundo2{
+        position: absolute;
+        width: 100%;
+        height: 115%;
+        top: 0%;
+        z-index: -3;
+        background: rgb(10,39,123);
+        background: linear-gradient(180deg, rgba(10,39,123,1) 0%, rgba(17,192,189,1) 100%);
+    }
+    .divisor3{
+        height: 20%;
+    }
+    .img_conta{
+        width: 5rem;
+        height: 5rem;
+    }
+    .inside-conta>p{
+        font-size: 2rem;
+    }
+}
+@media(width<=920px){
+    .background1_img_1{
+        width: 130px;
+        height: 230px;
+        right: 12%;
+        top: 40%;
+    }
+    .background1_img_2{
+        width: 130px;
+        height: 230px;
+        right: 5%;
+        top: 25%;
+    }
+    .complemento_header{
+        margin-top: 12rem;
+        margin-bottom: 30rem;
+        width: 60rem;
+    }
+    .complemento_header>h1{
+        font-size: 4rem;
+    }
+    .complemento_header>p{
+        width: 54.5rem;
+        font-size: 1.4rem;
+    }
+    .btn_speak_me{
+        font-size: 1.8rem;
+        width: 20rem;
+        height: 4.8rem;
+    }
+    .divisor1{
+        width: 100%;
+        height: 55%;
+    
+        background-image: url(imgs/super.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        top:  20%;
+        z-index: -2;
+    }
+    .background1{
+        width: 100%;
+        height: 70%;
+        position: absolute;
+        background: rgb(2,15,30);
+        background: linear-gradient(180deg, rgba(2,15,30,1) 0%, rgba(11,41,130,1) 100%);
+        z-index: -9;
+    }
+    .img_me{
+        width: 280px;
+        height: 280px;
+        border-radius: 100%;
+        margin-bottom: 5rem;
+        box-shadow: 5px 6px 25px -1px rgba(75, 75, 75, 0.418);
+    }
+    .sobre_mim{
+        width: 100%;
+        gap: 3rem;
+        margin-bottom:15rem;
+    }
+    .sobre>.texto_sobre{
+        width:600px;
+    }
+    .texto_sobre>P{
+        font-size: 1.6rem;
+    }
+    #my_name{
+        font-size: 2rem;
+    }
+    p{
+        font-size: 1.6rem;
+    }
+    h2{
+        font-size: 3rem;
+    }
+    h3{
+        font-size: 2.5rem;
+    }
+
+    .navbar{
+        gap: 0.5rem;
+        width: 70%;
+    }
+    li{
+        font-size: 2rem;
+    }
+    .mensage>label{
+        font-size: 2rem;
+        margin-top: 1.5rem;
+    }
+    .mensage>input{
+        width: 100%;
+        outline: none;
+        box-shadow: 4px 4px 20px #54505059;
+        padding: 1.5rem;
+        font-size: 1.5rem;
+        border-radius: 13px;
+        color: #061441;
+        font-family: "Roboto", sans-serif;
+    }
+    .mensage>textarea{
+        padding: 1.5rem;
+        border-radius: 13px;
+        font-size: 1.5rem;
+    }
+
+    .buttons_mensage{
+        height: 4rem;
+        gap: 10px;
+    }
+    .buttons_mensage>button{
+        width: 15rem;
+        border-radius: 0.5rem;
+        font-size: 1.6rem;
+    }
+
+    .btn_ver{
+        padding: 0.9rem 4.5rem;
+        letter-spacing: 1.5px;
+        font-size: 1.5rem;
+    }
+}
+@media(width<=830px){
+    .background1_img_1{
+        width: 130px;
+        height: 230px;
+        right: 12%;
+        top: 43%;
+    }
+    .background1_img_2{
+        width: 130px;
+        height: 230px;
+        right: 4%;
+        top: 26%;
+    }
+    .complemento_header{
+        margin-top: 22rem;
+        margin-bottom: 30rem;
+        width: 50rem;
+    }
+    .complemento_header>h1{
+        font-size: 3.5rem;
+    }
+    .complemento_header>p{
+        width: 48rem;
+        font-size: 1.2rem;
+    }
+    .btn_speak_me{
+        font-size: 1.5rem;
+        width: 18rem;
+        height: 4.4rem;
+    }
+    .img_me{
+        width: 240px;
+        height: 240px;
+        border-radius: 100%;
+        margin-bottom: 4rem;
+        box-shadow: 5px 6px 25px -1px rgba(75, 75, 75, 0.418);
+    }
+    .sobre_mim{
+        width: 100%;
+        gap: 3rem;
+        margin-bottom:15rem;
+    }
+    .sobre>.texto_sobre{
+        width:550px;
+    }
+    .texto_sobre>P{
+        font-size: 1.4rem;
+    }
+    #my_name{
+        font-size: 1.8rem;
+    }
+    p{
+        font-size: 1.4rem;
+    }
+    h2{
+        font-size: 2.5rem;
+    }
+    h3{
+        font-size: 2rem;
+    }
+    .img_footer{
+        width: 20rem;
+        height: 25rem;
+    }
+    .titulo{
+        z-index: -3;
+    }
+    .project_grup{
+        z-index: -3;
+    }
+    .header-desktop{
+        display: none;
+    }
+    .header_cell{
+        display: flex;
+    }
+    footer{
+        height: 70rem;
+    }
+}
+
+@media(width<=730px){
+    .complemento_header{
+        margin-left: 2rem;
+    }
+    .background1{
+        width: 100%;
+        height: 60%;
+    }
+    .divisor1{
+        width: 100%;
+        height: 60%;
+    
+        background-image: url(imgs/super.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        position: absolute;
+        top:  12%;
+        z-index: -2;
+    }
+    .background1_img_1{
+        width: 110px;
+        height: 170px;
+        right: 12%;
+        top: 35%;
+    }
+    .background1_img_2{
+        width: 110px;
+        height: 170px;
+        right: 3%;
+        top: 25%;
+    }
+    .complemento_header{
+        margin-top: 15rem;
+        margin-bottom: 30rem;
+        width: 50rem;
+    }
+    
+    .imgs_icons{
+        width: 6rem;
+        height: 6rem;
+    }
+    .icons_code{
+        gap: 7rem;
+    }
+    .divisor3{
+        height: 14%;
+    }
+    .mensage{
+        margin-top: 60%;
+    }
+    footer{
+        height: 60rem;
+    }
+}
+@media(width<=660px){
+    .complemento_header>h1{
+        font-size: 3rem;
+    }
+    .complemento_header>p{
+        width: 41rem;
+        font-size: 13px;
+    }
+    .btn_speak_me{
+        font-size: 1.4rem;
+        width: 17rem;
+        height: 4rem;
+    }
+    .img_me{
+        width: 220px;
+        height: 220px;
+    }
+    .sobre_mim{
+        width: 100%;
+        gap: 2rem;
+        margin-bottom:10rem;
+    }
+    .sobre>.texto_sobre{
+        margin-top: -30px;
+        width:430px;
+    }
+    .texto_sobre>P{
+        font-size: 1.2rem;
+    }
+    #my_name{
+        font-size: 1.6rem;
+    }
+    p{
+        font-size: 1.2rem;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    h3{
+        font-size: 1.5rem;
+    }
+    .btn_ver{
+        padding: 0.8rem 3.5rem;
+        letter-spacing: 1.5px;
+        font-size: 1.3rem;
+    }
+    .complemento_header{
+        margin-left: 2rem;
+        margin-top: 22rem;
+        margin-bottom: 30rem;
+        width: 50rem;
+    }
+    .background1{
+        width: 100%;
+        height: 60%;
+    }
+    .divisor1{
+        width: 100%;
+        height: 60%;
+    
+        background-image: url(imgs/super.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        position: absolute;
+        top:  12%;
+        z-index: -2;
+    }
+    .background1_img_1{
+        width: 110px;
+        height: 170px;
+        right: 12%;
+        top: 35%;
+    }
+    .background1_img_2{
+        width: 110px;
+        height: 170px;
+        right: 3%;
+        top: 25%;
+    }
+    .complemento_header{
+        margin-top: 15rem;
+        margin-bottom: 30rem;
+        width: 50rem;
+    }
+    
+    .imgs_icons{
+        width: 6rem;
+        height: 6rem;
+    }
+    .icons_code{
+        gap: 7rem;
+    }
+    .divisor3{
+        height: 14%;
+    }
+    .mensage{
+        margin-top: 60%;
+    }
+    footer{
+        height: 60rem;
+    }
+
+}
+@media(width<=630px){
+    .complemento_header{
+        margin-left: 1.5rem;
+    }
+    .background1{
+        width: 100%;
+        height: 50%;
+    }
+    .divisor1{
+        width: 100%;
+        height: 42%;
+    
+        background-image: url(imgs/super.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        top:  12%;
+        z-index: -2;
+    }
+    .background1_img_1{
+        width: 90px;
+        height: 150px;
+        right: 12%;
+        top:32%;
+    }
+    .background1_img_2{
+        width: 90px;
+        height: 150px;
+        right: 3%;
+        top: 20%;
+    }
+    .complemento_header{
+        margin-top: 15rem;
+        margin-bottom: 30rem;
+        width: 50rem;
+    }
+    
+    .imgs_icons{
+        width: 6rem;
+        height: 6rem;
+    }
+    .icons_code{
+        gap: 7rem;
+    }
+    .divisor3{
+        height: 14%;
+    }
+    .mensage{
+        margin-top: 60%;
+    }
+    footer{
+        height: 60rem;
+    }
+}
+@media(width<=560px){
+    .complemento_header{
+        margin-top: 13rem;
+        width: 38rem;
+    }
+    .complemento_header>h1{
+        font-size: 2.4rem;
+    }
+    .complemento_header>p{
+        width: 33rem;
+        font-size: 12px;
+    }
+    .btn_speak_me{
+        font-size: 1.4rem;
+        width: 15rem;
+        height: 3.5rem;
+        margin-top: -10px;
+    }
+    
+}
+@media(width<=500px){
+    .complemento_header{
+        margin-top: 13rem;
+        width: 32rem;
+    }
+    .complemento_header>h1{
+        font-size: 2.2rem;
+    }
+    .complemento_header>p{
+        width: 30rem;
+        font-size: 10px;
+    }
+    .btn_speak_me{
+        font-size: 1.2rem;
+        width: 13rem;
+        height: 3rem;
+        margin-top: -10px;
+    }
+    
+}
+@media(width<=470px){
+    .complemento_header{
+        margin-top: 13rem;
+        width: 30rem;
+    }
+    .complemento_header>h1{
+        font-size: 2rem;
+    }
+    .complemento_header>p{
+        width: 27.5rem;
+        font-size: 9px;
+    }
+    .img_me{
+        width: 200px;
+        height: 200px;
+    }
+    .sobre_mim{
+        width: 100%;
+        gap: 1rem;
+        margin-bottom:5rem;
+    }
+    .sobre>.texto_sobre{
+        width:380px;
+    }
+    
+    #my_name{
+        font-size: 1.5rem;
+    }
+    .linguagens{
+        width: 100%;
+        margin-bottom: 14rem;
+    }
+    .imgs_icons{
+        width: 5rem;
+        height: 5rem;
+    }
+    .icons_code{
+        gap: 4rem;
+    }
+    .btn_ver{
+        padding: 0.8rem 3.5rem;
+        letter-spacing: 1.5px;
+        font-size: 1.3rem;
+    }
+    .projetos{
+        padding: 0rem;
+        gap: 2rem;
+        padding-top: 11rem;
+    }
+    .project_grup{
+        gap: 3rem;
+    }
+    .section_porject{
+        border-radius: 40px;
+        width: 90%;
+    }
+    .fundo2{
+        position: absolute;
+        width: 100%;
+        height: 108%;
+    }
+    .divisor3{
+        height: 12%;
+    }
+    .mensage{
+        margin-top: 50%;
+    }
+}

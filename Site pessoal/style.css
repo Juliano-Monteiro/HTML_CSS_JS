@@ -2,7 +2,6 @@
     margin: 0;
     border: 0;
     box-sizing: border-box;
-    z-index: -2;
 }
 :root{
     font-size: 62.5%;
@@ -10,14 +9,12 @@
 body{
     width: 100%;
     height: 100vh;
-
 }
 header{
     width: 100%;
     height: auto;
-    position: fixed;
-    top: 0;
-    z-index: -1;
+    display: flex;
+    flex-direction: column;
 }
 main{
     z-index: -3;
@@ -26,10 +23,10 @@ main{
     width: 100%;
     height: 100%;
     position: relative;
-    
 }
-/*_____________________________________________________________________*/
-
+/*
+____________________________ FUNDOS E DIVISORES DE PAGINA _________________________________________
+*/
 .background1{
     width: 100%;
     height: 100%;
@@ -114,16 +111,9 @@ main{
     bottom: 0%;
     z-index: -8;
 }
-
-
-
-
-
-
-
-
-/*_____________________________________________________________________*/
-
+/*
+______________________________________ HEADER ___________________________________________
+*/
 .header-desktop{
     z-index: -1;
     position: relative;
@@ -131,13 +121,44 @@ main{
     width: 100%;
     height: 100%;
     color: white;
-    padding: 2rem 9rem;
+    padding: 2rem 5rem;
     display: flex;
     gap: 2rem;
     justify-content: space-between;
     align-items: center;
     text-align: center;
+    
+}
+.header_cell{
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    color: white;
+    
+    gap: 2rem;
+    flex-direction: column;
+    
+}
+.header_cell>.navbar_cell>li{
+    background-color: #061441;
+    border-radius: 0.5rem;
+    display: none;
+}
+.logo_and_menu{
+    width: 100%;
+    height: fit-content;
+    background: #03122A;
+    display: flex;
+    padding: 2rem 5rem;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.logo_and_menu>img{
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
 }
 .navbar{
     display: flex;
@@ -146,6 +167,17 @@ main{
     width: 80%;
     justify-content: end;
     align-items: center;
+}
+.navbar_cell{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    list-style: none;
+    color: white;
+    gap: 1rem;
+    flex-direction: column;
+    text-align: center;
+    
 }
 li{
     padding: 1rem 2rem;
@@ -173,18 +205,15 @@ p{
     text-align: justify;
     color: #18191E;
 }
-
 span{
     color: #17FFDC;
 }
-
-
-
-/* parte do main */
-
+/*
+parte do main
+*/
 .complemento_header{
     color: white;
-    padding-top: 15rem;
+    margin-top: 10rem;
     width: 120rem;
     display: flex;
     flex-direction: column;
@@ -205,6 +234,7 @@ span{
     color: #11C0BD;
 }
 .btn_speak_me{
+    cursor: pointer;
     background: rgb(17,192,189);
     background: linear-gradient(90deg, rgba(17,192,189,1) 0%, rgba(8,90,89,1) 100%);
     font-size: 3.9rem;
@@ -213,12 +243,10 @@ span{
     border-radius: 8px;
     width: 28.6rem;
     height: 6.8rem;
-    outline: none;
-    cursor: pointer;
 }
-
-
-/* sobre mim */
+/*
+________________________________________ SOBRE MIM _____________________________________________
+*/
 .sobre_mim{
     width: 100%;
     display: flex;
@@ -257,8 +285,9 @@ span{
     border-radius: 17px;
 }
 
-
-/* linguagens de programação */
+/*
+___________________________________________ LINGUAGENS ______________________________________________
+*/
 .linguagens{
     width: 100%;
     display: flex;
@@ -322,13 +351,16 @@ span{
     background-image: url("imgs/c-program-icon.png");
     background-size: contain;
 }
-
+/*
+__________________________________________ PROJETOS ________________________________________________
+*/
 .projetos{
     padding: 0rem 5rem;
     padding-top: 40rem;
     display: flex;
     flex-direction: column;
     gap: 4rem;
+    
 }
 .projetos>.titulo>h2{
     color: #17FFDC;
@@ -341,6 +373,7 @@ span{
     justify-content: center;
     align-items: center;
     gap: 4rem;
+    
 }
 .section_porject{
     width: 80%;
@@ -392,11 +425,9 @@ span{
     color: #061441;
     box-shadow: 0px 0px 20px rgba(152, 255, 248, 0.716);
 }
-
-
-
-/* parte destinada a mensagem */
-/* 11C0BD */
+/*
+___________________________________________ MENSAGEM ________________________________________________
+*/
 .mensage{
     width: 100%;
     display: flex;
@@ -463,10 +494,9 @@ span{
 .buttons_mensage>button:nth-child(2):hover{
     background-color: #FF4F17;
 }
-
-
-/* estilização do footer */
-
+/*
+___________________________________________ FOOTER ___________________________________________________
+*/
 footer{
     width: 100%;
     height: 90rem;

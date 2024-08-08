@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criando Sites JMS</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsividade.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Staatliches&display=swap" rel="stylesheet">
@@ -27,12 +28,18 @@
                     <li id="contato_link">CONTATO</li>
                 </div>
             </div>
-            <!-- <div class="header-cell">
-                <div>Criando Sites JMS</div>
-                <div>
-                    X
+            <div class="header_cell">
+                <div class="logo_and_menu">
+                    <h3>Criando Sites <span>JMS</span></h3>
+                    <img src="imgs/Nova pasta/menu-de-pontos.png" alt="">
                 </div>
-            </div> -->
+                <div class="navbar_cell">
+                    <li>HOME</li>
+                    <li>SOBRE MIM</li>
+                    <li>PROJETOS</li>
+                    <li>CONTATO</li>
+                </div>
+            </div>
         </header>
         <main>
 
@@ -40,7 +47,7 @@
             <div class="complemento_header">
                 <h1>Desenvolvo <span class="span2">sites com elegancia</span> e <span class="span2">performace</span> para você e sua empresa</h1>
                 <p>Desenvolvemos websites com designs atrativos para promover seu trabalho, serviços e empresa com eficiência, garantindo qualidade, praticidade e alto desempenho. Criamos uma presença digital impactante que converte visitantes em clientes. Descubra mais sobre nossos serviços abaixo ou fale comigo.</p>
-                <button class="btn_speak_me">Fale Comigo</button>
+                <button class="btn_speak_me" id="btn_fale">Fale Comigo</button>
             </div>
 
             <!-- seção sobre mim -->
@@ -74,7 +81,6 @@
                         <div class="imgs_icons" id="img9"></div>
                     </div>
             </div>
-
             <!-- seção de exibição de projetos -->
             <div class="projetos_container">
                 <div class="fundo2">
@@ -101,13 +107,13 @@
                             </div>
                         </div>
                         <div class="section_porject">
+                            <div class="img_project">
+                                <img src="imgs/projetos/projeto2.png" alt="">
+                            </div>
                             <div class="text_project">
                                 <h3>Jogo da Velha</h3>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente commodi, corporis non ducimus nihil consequuntur suscipit. Doloribus et aliquam sint, fugiat optio ducimus provident cum minima ut, voluptatum suscipit placeat.</p>
                                 <button class="btn_ver">Ver site</button>
-                            </div>
-                            <div class="img_project">
-                                <img src="imgs/projetos/projeto2.png" alt="">
                             </div>
                         </div>
                         <div class="section_porject">
@@ -124,19 +130,21 @@
                 </div>
             </div>
            
-            <div class="mensage">
-                <h2>ENVIE UMA MENSAGEM</h2>
-                <label for="nome">Nome</label>
-                <input type="text" placeholder="Digite seu nome" name="nome" id="nome">
-                <label for="email">E-Mail</label>
-                <input type="email" placeholder="Digite seu e-mail" name="email" id="email">
-                <label for="mensagem">Mensagem</label>
-                <textarea name="mensagem" id="mensagem" placeholder="Mensagem..."></textarea>
-                <div class="buttons_mensage">
-                    <button>Enviar</button>
-                    <button>Apagar</button>
+            <form action="" method="post">
+                <div class="mensage">
+                    <h2>ENVIE UMA MENSAGEM</h2>
+                    <label for="nome">Nome</label>
+                    <input type="text" placeholder="Digite seu nome" name="nome" id="nome">
+                    <label for="email">E-Mail</label>
+                    <input type="email" placeholder="Digite seu e-mail" name="email" id="email">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea name="mensagem" id="mensagem" placeholder="Mensagem..."></textarea>
+                    <div class="buttons_mensage">
+                        <button type="submit">Enviar</button>
+                        <button type="reset">Apagar</button>
+                    </div>
                 </div>
-            </div>
+            </form>
         </main>
         <footer>
             <div class="fundo3"></div>
