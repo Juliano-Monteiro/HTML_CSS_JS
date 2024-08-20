@@ -138,12 +138,12 @@ ______________________________________ HEADER __________________________________
     
     gap: 2rem;
     flex-direction: column;
-    
-}
-.header_cell>.navbar_cell>li{
     background-color: #061441;
+}
+
+.header_cell>.navbar_cell{
+    
     border-radius: 0.5rem;
-    display: none;
 }
 .logo_and_menu{
     width: 100%;
@@ -573,4 +573,7 @@ footer>p{
     margin-bottom: 2rem;
     font-size: 2rem;
     font-family: "Staatliches", sans-serif;
+}
+.open_close{
+    display: none;
 }
