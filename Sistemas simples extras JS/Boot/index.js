@@ -38,7 +38,7 @@ function main(){
             if(pergunta.value == 3){
                 setTimeout(() => {
                     boot.src = "imagens/img (7).jpg";
-                    texto.innerHTML = "Juliano tem um recado para você: Quer namorar comigo? no off por enquanto rsrs<br /><br /> <ul><li>1 Tudo bem Osvaldo?</li><li>2 Como foi o seu dia?</li><li>3 Me conta um segredo?</li><li>0 Tchau Osvaldo</li></ul>";
+                    texto.innerHTML = "Juliano tá muito afim de voceeê💕, dá uma chance para ele vaii :) 😊 ele não para de falar de você não aguento maissss rsrsrsrs 🤯<br /> <ul><li>1 Tudo bem Osvaldo?</li><li>2 Como foi o seu dia?</li><li>3 Me conta um segredo?</li><li>0 Tchau Osvaldo</li></ul>";
                 }, 500);
             }
             if(pergunta.value == 0){
