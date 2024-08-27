@@ -32,7 +32,7 @@ function main(){
             if(pergunta.value == 2){
                 setTimeout(() => {
                     boot.src = "imagens/img (2).jpg";
-                    texto.innerHTML = "Hoje eu tive que colocar olho em minhas engrenajens, foi bem complicado, mas foi bomm! <br /><br /> <ul><li>1 Tudo bem Osvaldo?</li><li>2 Como foi o seu dia?</li><li>3 Me conta um segredo?</li><li>0 Tchau Osvaldo</li></ul>";
+                    texto.innerHTML = "Hoje eu tive que colocar óleo em minhas engrenajens, foi bem complicado, mas foi bomm! <br /><br /> <ul><li>1 Tudo bem Osvaldo?</li><li>2 Como foi o seu dia?</li><li>3 Me conta um segredo?</li><li>0 Tchau Osvaldo</li></ul>";
                 }, 500);
             }
             if(pergunta.value == 3){
