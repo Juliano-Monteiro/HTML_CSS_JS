@@ -360,7 +360,6 @@ __________________________________________ PROJETOS ____________________________
     display: flex;
     flex-direction: column;
     gap: 4rem;
-    
 }
 .projetos>.titulo>h2{
     color: #17FFDC;
