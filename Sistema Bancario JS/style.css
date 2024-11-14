@@ -1,0 +1,535 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    padding: 20px;
+    background-color: rgb(202, 202, 202);
+    color: rgb(0, 0, 0);
+}
+
+input{
+    outline: none;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    width: 100%;
+}
+.titulo{
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 18pt;
+}
+.buttonStyle{
+    width: 80%;
+    background-color: rgb(21, 176, 132);
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+.buttonStyle:hover{
+    box-shadow: 0px 0px 20px rgba(0, 255, 183, 0.456);
+    background-color: rgb(10, 234, 182);
+}
+.form1,.form2{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+button{
+    width: fit-content;
+    margin: auto;
+    padding: 5px 40px;
+}
+.link{
+    margin: auto;
+    margin-top: 10px;
+    color: black;
+    cursor: pointer;
+}
+.link:hover{
+    color: blueviolet;
+}
+#open{
+    display: none;
+}
+.valorConta{
+    display: flex;
+}
+.containerConta{
+    width: 100%;    
+    height: 100%;
+    position: relative;
+}
+
+
+.blocoPopup{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.labelPopup{
+    font-size: 12pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.popup{
+    position: absolute;
+    padding: 20px;
+    width: 50%;
+    height: fit-content;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 20px rgba(80, 80, 80, 0.582);
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    z-index: 1;
+}
+.inputsPopup{
+    margin: 0;
+    background-color: white;
+    border: 3px solid blueviolet;
+    padding: 10px;
+    font-size: 14pt;
+    letter-spacing: 1px;
+    width: 80%;
+    height: 100%;
+}
+#codigoPopup{
+    width: 100%;
+    height: 100%;
+    font-weight: bold;
+}
+.btneditar{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 47px;
+    background-color: blueviolet;
+    cursor: pointer;
+    border: none;
+    padding: 8px;
+}
+.btneditar>img{
+    width: auto;
+    height: 100%;
+}
+.subBlocoCampoPopup{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.SalvarAlteracoes{
+    width: 100%;
+    background-color: rgb(2, 131, 88);
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+.blocoClosePopup{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    cursor: pointer;
+}
+.blocoClosePopup>img{
+    width: 20px;
+    height: auto;
+}
+.headerConta{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+}
+.containerFormulario{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    font-size: 18pt;
+    font-weight: bold;
+    font-style: italic;
+}
+.outros{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.olho,.perfil{
+    width: 35px;
+    height: auto;
+    margin: 0px 15px;
+    cursor: pointer;
+}
+.valorConta{
+    font-size: 16pt;
+    
+}
+.olho>img,.perfil>img{
+    width: 100%;
+    height: 100%;
+}
+.bodyContaContainer{
+    width: 100%;
+    height: auto;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    
+}
+.bodyConta{   
+    width: fit-content;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px;
+}
+.bloco{
+    width: 300px;
+    height: fit-content;
+    padding: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 5px 5px 20px rgba(132, 132, 132, 0.676);
+    background-color: rgb(242, 242, 242);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .2s all ease-in-out;
+}
+.nomesIcons{
+    font-size: 18pt;
+    font-weight: bold;
+
+}
+.bloco>img{
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+}
+.bloco:hover{
+    box-shadow: 0px 0px 20px rgba(0, 255, 183, 0.456);
+    background-color: rgb(10, 234, 182);
+}
+.logout{
+    padding: 10px 30px;
+    border: none;
+    font-size: 10pt;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    background-color: rgb(167, 1, 1);
+    color: white;
+    border-radius: 5px;
+    box-shadow: 3px 4px 20px rgba(129, 129, 129, 0.432);
+    cursor: pointer;
+}
+.logout:hover{
+    background-color: rgb(167, 1, 1);
+    box-shadow:0px 0px 20px rgba(255, 0, 0, 0.479);
+}
+.depositarConta,.sacarConta,.transferirConta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.campoDinheiro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20pt;
+}
+.campoDinheiro>input{
+    background-color: transparent;
+    color: black;
+    padding: 10px;
+    font-size: 20pt;
+    border: none;
+    text-align: end;
+    letter-spacing: 1px;
+    outline: none;
+    -moz-appearance: textfield;
+    box-shadow: 3px 3px 5px rgba(84, 84, 84, 0.526);
+}
+.campoDinheiro>input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+.campoDadosTransferido{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+.campoDadosTransferido>label{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+.campoDadosTransferido>input{
+    color: black;
+    padding: 10px;
+    font-size: 20pt;
+    border: none;
+    text-align: end;
+    letter-spacing: 1px;
+    outline: none;
+    -moz-appearance: textfield;
+    box-shadow: 3px 3px 5px rgba(84, 84, 84, 0.526);
+}
+.campoDadosTransferido>input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+.btnClosePage{
+    width: 80%;
+    background-color: white;
+    box-shadow: 5px 5px 15px rgba(132, 132, 132, 0.356);
+    color: rgb(255, 8, 8);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+.btnClosePage:hover{
+    box-shadow: 5px 5px 20px rgba(132, 132, 132, 0.515);
+}
+.pixPage{
+    margin-top: 10%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.subBlocoOpcPix{
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.subBlocoOpcPix>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18pt;
+    gap: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.linkPix>img{
+    width: auto;
+    height: 30px;
+}
+.pixPageCriarChave{
+    margin-top: 10%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.opcTypeKey{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+.opcTypeKey div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+}
+.opcTypeKey div>label{
+    text-wrap: nowrap;
+    font-size: 14pt;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.opcTypeKey div>input{
+    width: 15px;
+    height: 15px;
+    
+}
+#NovaChave{
+    width: 50%;
+    background-color: transparent;
+    color: black;
+    padding: 10px;
+    font-size: 16pt;
+    border: 3px solid rgb(21, 176, 132);
+    border-radius: 5px;
+    text-align: start;
+    letter-spacing: 1px;
+    outline: none;
+    box-shadow: 3px 3px 5px rgba(84, 84, 84, 0.526);
+}
+.pixPageChavesCadastradas{
+    margin-top: 10%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+}
+.areaDaChavePix{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    font-size: 18pt;
+}
+.tipoDeChaveCadastrada{
+    font-size: 12pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: blueviolet;
+}
+.subBlocoCHavesCadastradas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.subBlocoCHavesCadastradas button{
+    border: none;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: .2s all ease-in-out;
+}
+.subBlocoCHavesCadastradas button:hover{
+    scale: 1.2;
+}
+.imgCopiar{
+    width: 35px;
+    height: 35px;
+}
+#closePixChavesCadastradas{
+    width: 100%;
+}
+
+.PagarPix, .pagarPorPixFinal{
+    margin-top: 10%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.tipoChaveInserida{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    width: 100%;
+    height: 100%;
+}
+.tipoChaveInserida button{
+    width: 100%;
+    padding: 20px;
+    font-size: 16pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.inserirChave{
+    width: 100%;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#chavePesquisada{
+    width: 80%;
+    background-color: transparent;
+    color: black;
+    padding: 10px;
+    font-size: 16pt;
+    border: 3px solid rgb(21, 176, 132);
+    border-radius: 5px;
+    text-align: start;
+    letter-spacing: 1px;
+    outline: none;
+    box-shadow: 3px 3px 5px rgba(84, 84, 84, 0.526);
+}
+.pagarPorPixFinal button{
+    margin-bottom: -10px;
+    width: 100%;
+}
+.receberPix{
+    width: 50%;
+    margin-bottom: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.div_qr{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.chavePixReferente{
+    font-size: 16pt;
+    letter-spacing: 1px;
+}

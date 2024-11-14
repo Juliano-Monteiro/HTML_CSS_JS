@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="popup" id="open">
+        <div class="blocoClosePopup">
+            <img src="imgs/simbolo-x.png" alt="">
+        </div>
+        <div class="blocoPopup">
+            <label for="codigoPopup" class="labelPopup">Codigo da COnta</label>
+            <div class="subBlocoCampoPopup">
+                <input type="text" id="codigoPopup" disabled class="inputsPopup" value="x">
+            </div>
+        </div>
+        <div class="blocoPopup">
+            <label for="nomePopup" class="labelPopup">Nome</label>
+            <div class="subBlocoCampoPopup">
+                <input type="text" id="nomePopup" class="inputsPopup" disabled value="Juliano">
+                <button type="button" class="btneditar"><img src="imgs/botao-editar.png" alt=""></button>
+            </div>
+        </div>
+        <div class="blocoPopup">
+            <label for="cpfPopup" class="labelPopup">CPF</label>
+            <div class="subBlocoCampoPopup">
+                <input type="text" id="cpfPopup" class="inputsPopup" disabled value="0909094823">
+                <button type="button" class="btneditar"><img src="imgs/botao-editar.png" alt=""></button>
+            </div>
+        </div>
+        <div class="blocoPopup">
+            <label for="emailPopup" class="labelPopup">e-mail</label>
+            <div class="subBlocoCampoPopup">
+                <input type="text" id="emailPopup" class="inputsPopup" disabled value="nseialeatorio@gmail.com">
+                <button type="button" class="btneditar"><img src="imgs/botao-editar.png" alt=""></button>
+            </div>
+        </div>
+        <div class="blocoPopup">
+            <label for="salarioPopup" class="labelPopup">Salario</label>
+            <div class="subBlocoCampoPopup">
+                <input type="text" id="salarioPopup" class="inputsPopup" disabled value="3000,00">
+                <button type="button" class="btneditar"><img src="imgs/botao-editar.png" alt=""></button>
+            </div>
+        </div>
+        <div class="blocoPopup">
+            <label for="senhaPopup" class="labelPopup">Senha</label>
+            <div class="subBlocoCampoPopup">
+                <input type="text" id="senhaPopup" class="inputsPopup" disabled value="2323">
+                <button type="button" class="btneditar"><img src="imgs/botao-editar.png" alt=""></button>
+            </div>
+        </div>
+        <button type="button" class="SalvarAlteracoes">Salvar</button>
+    </div>
+    <div class="containerConta" id="open">
+        
+        <div class="headerConta" id="">
+            <div class="logo">
+                JMS Banco
+            </div>
+            <div class="outros" id="">
+                <div class="valorConta" id="open">
+                    R$ <p>00,00</p> 
+                </div>
+                <div class="olho">
+                    <img src="imgs/invisivel.png" alt="">
+                </div>
+                <div class="nomeConta">
+                    <p>Nome Pessoal</p>
+                </div>
+                <div class="perfil">
+                    <img src="imgs/conta.png" alt="">
+                </div>
+                <div>
+                    <button type="button" class="logout">Sair</button>
+                </div>
+            </div>
+        </div>
+        <div class="bodyContaContainer"> <!--bodyContaContainer-->
+            <div class=" bodyConta" id=""> <!--bodyConta-->
+                <div class="bloco pix"><img src="imgs/pix.png" alt=""><p class="nomesIcons">Realizar Pix</p></div>
+                <div class="bloco transferir"><img src="imgs/transferir.png" alt=""><p class="nomesIcons">Transferir</p></div>
+                <div class="bloco boleto"><img src="imgs/boleto.png" alt=""><p class="nomesIcons">Pagar Boleto</p></div>
+                <div class="bloco depositar"><img src="imgs/deposito.png" alt=""><p class="nomesIcons">Depositar</p></div>
+                <div class="bloco sacar"><img src="imgs/sacar.png" alt=""><p class="nomesIcons">Sacar</p></div>
+                <div class="bloco cartao"><img src="imgs/Cartao.png" alt=""><p class="nomesIcons">Cartões</p></div>
+            </div>
+            <div  class="depositarConta" id="open">
+                <p class="titulo">Depositar dinheiro na sua conta</p>
+                <div class="campoDinheiro">
+                    R$ <input type="number" placeholder="00.00" id="valorDepositar">
+                </div>
+                <button type="button" class="buttonStyle btnDepositar">Depositar</button>
+                <button type="button" class="btnClosePage" id="closeDepositar">Voltar</button>
+            </div>
+            <div  class="sacarConta" id="open">
+                <p class="titulo">Sacar dinheiro na sua conta</p>
+                <div class="campoDinheiro">
+                    R$ <input type="number" placeholder="00.00" id="valorSacar">
+                </div>
+                <button type="button" class="buttonStyle btnSacar">Sacar</button>
+                <button type="button" class="btnClosePage" id="closeSacar">Voltar</button>
+            </div>
+            <div  class="transferirConta" id="open">
+                <p class="titulo">Transferir dinheiro</p>
+                <div class="campoDadosTransferido">
+                    <label for="codigo">Codigo da Conta</label>
+                    <input type="number" placeholder="000342452" id="codigoContaPesquisado">
+                </div>
+                <div class="campoDinheiro">
+                    R$ <input type="number" placeholder="00.00" id="valorTransfer">
+                </div>
+                <button type="button" class="buttonStyle btnTransfer">Transferir</button>
+                <button type="button" class="btnClosePage" id="closeTransferir">Voltar</button>
+            </div>
+            <div  class="pixPage" id="open">
+                <button type="button" class="buttonStyle pixPagar">Pagar com pix</button>
+                <button type="button" class="buttonStyle pixReceber">Receber com pix</button>
+                <div class="subBlocoOpcPix">
+                    <div class="criarChave linkPix"><img src="imgs/chave.png" alt="">Criar chave</div>
+                    <div class="minhasChaves linkPix"><img src="imgs/gerenciamento-de-chaves.png" alt="">Minhas chaves</div>
+                </div>
+                <button type="button" class="btnClosePage" id="closePix">Voltar</button>
+            </div>
+            <div  class="pixPageCriarChave" id="open">
+                <p class="titulo">Selecione o tipo de chave que deseja cadastrar</p>
+                <div class="opcTypeKey">
+                        <div class="subOpcTypeKey">
+                            <input type="radio" name="tipoChave" id="cpfChave" class="dadosInput2" value="cpf" >
+                            <label for="cpfChave">CPF</label>
+                        </div>
+                        <div class="subOpcTypeKey">
+                            <input type="radio" name="tipoChave" id="emailChave" class="dadosInput2" value="email">
+                            <label for="emailChave">E-mail</label>
+                        </div>
+                        <div class="subOpcTypeKey">
+                            <input type="radio" name="tipoChave" id="telChave" class="dadosInput2" value="tel">
+                            <label for="telChave">Telefone</label>
+                        </div>
+                        <div class="subOpcTypeKey">
+                            <input type="radio" name="tipoChave" id="randomChave" class="dadosInput2" value="random">
+                            <label for="randomChave">Chave Aleatória</label>
+                        </div>
+                </div>
+                <input type="text" id="NovaChave" placeholder="Digite a chave aqui" class="dadosInput2">
+                <button type="button" class="buttonStyle" id="cadastrarPix">Cadastrar</button>
+                <button type="button" class="btnClosePage" id="closePixCriar">Voltar</button>
+            </div>
+
+            <div  class="pixPageChavesCadastradas" id="open">
+            </div>
+
+            <div class="PagarPix" id="open"> 
+                <div class="tipoChaveInserida" id="">
+                    <p class="titulo">Escolha um tipo de chave</p>
+                    <button type="button" class="buttonStyle btnTypekeyInserted" value="cpf">CPF</button>
+                    <button type="button" class="buttonStyle btnTypekeyInserted" value="tel">Telefone</button>
+                    <button type="button" class="buttonStyle btnTypekeyInserted" value="email">E-mail</button>
+                    <button type="button" class="buttonStyle btnTypekeyInserted" value="random">Aleatoria</button>
+                    <button type="button" class="btnClosePage" id="closeTypeKeyInserted">Voltar</button>
+                </div>
+                <div class="inserirChave" id="open">
+                    <p class="titulo">Insira a chave pix</p>
+                    <input type="text" id="chavePesquisada">
+                    <button type="button" class="buttonStyle continuarParaPix">Continuar</button>
+                    <button type="button" class="btnClosePage" id="closeKeyInserted">Voltar</button>
+                </div>
+                <div  class="pagarPorPixFinal" id="open">
+                    <p class="titulo">Insira o valor</p>
+                    <div class="campoDinheiro">
+                        R$ <input type="number" placeholder="00.00" id="valorDoPix">
+                    </div>
+                    <p class="nomePessoaPix">Juliano Monteiro e Silva</p>
+                    <button type="button" class="buttonStyle btnPagarPix">Pagar</button>
+                    <button type="button" class="btnClosePage" id="closePagarPix">Voltar</button>
+                </div>
+            </div>
+
+            <div class="receberPix" id="open"></div>
+        </div>
+        
+</div>
+<div class="containerFormulario" id="">
+    <form action="" id="">
+        <div class="form1">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" >
+            <label for="senhaConfirmacao">Senha:</label>
+            <input type="password" id="senha">
+            <button type="button" id="entrarSistema">Entrar</button>
+            <p id="ciarContaLink" class="link">Cirar Conta</p>
+        </div>
+        <div class="form2" id="open">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" class="dadosInput">
+            <label for="cpf">CPF:</label>
+            <input type="number" id="cpf" class="dadosInput">
+            <label for="emailCriado">E-mail:</label>
+            <input type="emai" id="emailCriado" class="dadosInput">
+            <label for="data">Data de Nascimento:</label>
+            <input type="date" id="data" class="dadosInput">
+            <label for="salario">Salario:</label>
+            <input type="text" id="salario" class="dadosInput">
+            <label for="senhaCriada">Senha:</label>
+            <input type="password" id="senhaCriada" class="dadosInput">
+            <label for="outraSenha">Confirme Sua Senha:</label>
+            <input type="password" id="outraSenha" class="dadosInput">
+            <button type="button" id="criarConta">Criar</button>
+            <p id="logar" class="link">Logar</p>
+        </div>
+    </form>
+</div>
+     <script src="index.js"></script>
+</body>
+</html>
