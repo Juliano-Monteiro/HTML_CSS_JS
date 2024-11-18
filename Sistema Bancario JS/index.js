@@ -38,7 +38,7 @@ linkCriarConta.addEventListener("click", () => {
         
     }
 });
-//
+// -oi
 //// - botão que fica resposavel por levar o usuario para a pagina de logar na conta
 linkLogar.addEventListener("click", () => {
     if (paginaLogar.getAttribute("id") == "open") {
