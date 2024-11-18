@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-size:62,5%;
     box-sizing: border-box;
 }
 body{
@@ -10,22 +11,15 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
-form{
-    display: flex;
-    flex-direction: column;
-    width: 20%;
-    padding: 20px;
-    background-color: rgb(202, 202, 202);
-    color: rgb(0, 0, 0);
-}
+
 
 input{
     outline: none;
     margin-bottom: 10px;
     margin-top: 5px;
     width: 100%;
+    color: rgb(37, 37, 37);
 }
 .titulo{
     text-transform: uppercase;
@@ -48,10 +42,179 @@ input{
     box-shadow: 0px 0px 20px rgba(0, 255, 183, 0.456);
     background-color: rgb(10, 234, 182);
 }
-.form1,.form2{
+@keyframes animacao1{
+    0%{
+        transform: translateX(0%);
+        border-radius: 0px 50px 50px 0px;
+        box-shadow: -5px 0px 50px rgba(0, 0, 0, 0.406);
+    }
+
+    100%{
+        border-radius: 50px 0px 0px 50px;
+        transform: translateX(-100%);
+        box-shadow: 5px 0px 50px rgba(0, 0, 0, 0.617);
+    }
+}
+.animado1{
+    animation: animacao1 1.5s ease-in-out;
+}
+@keyframes animacao2{
+    0%{
+        transform: translateX(-100%);
+        border-radius: 50px 0px 0px 50px;
+        box-shadow: 5px 0px 50px rgba(0, 0, 0, 0.617);
+    }
+
+    100%{
+        border-radius: 0px 50px 50px 0px;
+        transform: translateX(0%);
+        box-shadow: -5px 0px 50px rgba(0, 0, 0, 0.406);
+    }
+}
+.animado2{
+    animation: animacao2 1.5s ease-in-out;
+}
+.subContainerFormulario{
+    width: 90%;
+    height: 80%;
+    display: flex;
+    border-radius: 50px;
+    position: relative;
+}
+form{
+    position: absolute;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub_form{
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+    background-color: #FFBA08;
+    color: rgb(255, 255, 255);
+    border-radius: 0px 50px 50px 0px;
+    
+}
+.div_formulario{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border-radius: 50px;
+    box-shadow: 10px 12px 30px -10px rgba(56, 56, 56, 0.42);
+}
+
+.sub_form label{
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #032B43;
+}
+.sub_form input{
+    padding: 0.8rem;
+    font-size: 1.4rem;
+    letter-spacing: 0.1rem;
+    margin-bottom: 1.2rem;
+    outline: none;
+    border: none;
+    border-radius: 0.2rem;
+}
+#pag_cadastro input{
+    padding: 0.7rem;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    margin-bottom: 1rem;
+}
+#pag_cadastro label{
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+}
+#entrarSistema{
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    letter-spacing: 0.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    padding: 1rem 10rem;
+    border-radius: 0.2rem;
+    background-color: #032B43;
+    color: #FFFBFC;
+    transition: .3s all ease-in-out;
+    cursor: pointer;
+    box-shadow: 5px 5px 20px -10px rgba(0, 0, 0, 0.554);
+}
+#criarConta{
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    padding: 0.8rem 8rem;
+    border-radius: 0.2rem;
+    background-color: #032B43;
+    color: #FFFBFC;
+    transition: .3s all ease-in-out;
+    cursor: pointer;
+    box-shadow: 5px 5px 20px -10px rgba(0, 0, 0, 0.554);
+}
+#entrarSistema:hover{
+    letter-spacing: 0.1rem;
+    box-shadow: 5px 5px 20px -10px rgba(0, 0, 0, 0.712);
+}
+#criarConta:hover{
+    letter-spacing: 0.1rem;
+    box-shadow: 5px 5px 20px -10px rgba(0, 0, 0, 0.712);
+}
+.bloco_form_campos{
+    width: 80%;
+    height: fit-content;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: start;
+}
+.img_form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border-radius: 50px;
+}
+
+#img_form1{
+    width: 50%;
+    background-image: url(imgs/pexels-armando-oliveira-346903221-29398075.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50px 0px 0px 50px;
+}
+#img_form2{
+    width: 50%;
+    background-image: url(imgs/pexels-kampus-8353796.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 0px 50px 50px 0px;
+}
+.containerFormulario{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #032B43;
 }
 button{
     width: fit-content;
@@ -60,12 +223,15 @@ button{
 }
 .link{
     margin: auto;
-    margin-top: 10px;
-    color: black;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+
+    margin-top: 1rem;
+    color: rgb(255, 255, 255);
     cursor: pointer;
 }
 .link:hover{
-    color: blueviolet;
+    color: #3F88C5;
 }
 #open{
     display: none;
@@ -170,13 +336,7 @@ button{
     align-items: center;
     padding: 0px 30px;
 }
-.containerFormulario{
-    width: 100%;
-    height: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 .logo{
     font-size: 18pt;
     font-weight: bold;

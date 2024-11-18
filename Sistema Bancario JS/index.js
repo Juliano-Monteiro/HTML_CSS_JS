@@ -16,13 +16,26 @@ let paginaLogar = document.querySelector(".form1");
 let paginaCriar = document.querySelector(".form2");
 let btnLogar = document.querySelector("#entrarSistema");
 let btnCriar = document.querySelector("#criarConta");
+paginaCriar.firstElementChild.style.boxShadow = "-5px 0px 50px rgba(0, 0, 0, 0.406)"; 
+paginaLogar.firstElementChild.style.boxShadow = "-5px 0px 50px rgba(0, 0, 0, 0.406)";
 //
 //// - botão que fica resposavel por levar o usuario para a pagina de criar conta
 linkCriarConta.addEventListener("click", () => {
+
+    
     if (paginaCriar.getAttribute("id") == "open") {
         paginaCriar.setAttribute("id", "");
+        paginaCriar.firstElementChild.setAttribute("class", "sub_form animado1");
+        setTimeout(()=>{
+            paginaCriar.firstElementChild.style.transform = "translateX(-100%)"; 
+            paginaLogar.firstElementChild.style.transform = "translateX(-100%)"; 
+            paginaCriar.firstElementChild.style.boxShadow = "-5px 0px 50px rgba(0, 0, 0, 0.406)"; 
+            paginaLogar.firstElementChild.style.boxShadow = "-5px 0px 50px rgba(0, 0, 0, 0.406)"; 
+            paginaCriar.firstElementChild.style.borderRadius = "50px 0px 0px 50px"; 
+        },1500)
         resetForms(paginaLogar);
         paginaLogar.setAttribute("id", "open");
+        
     }
 });
 //
@@ -30,6 +43,14 @@ linkCriarConta.addEventListener("click", () => {
 linkLogar.addEventListener("click", () => {
     if (paginaLogar.getAttribute("id") == "open") {
         paginaLogar.setAttribute("id", "");
+        paginaLogar.firstElementChild.setAttribute("class", "sub_form animado2");
+        setTimeout(()=>{
+            paginaCriar.firstElementChild.style.transform = "translateX(0%)"; 
+            paginaLogar.firstElementChild.style.transform = "translateX(0%)";
+            paginaCriar.firstElementChild.style.boxShadow = "5px 0px 50px rgba(0, 0, 0, 0.617)"; 
+            paginaLogar.firstElementChild.style.boxShadow = "5px 0px 50px rgba(0, 0, 0, 0.617)"; 
+            paginaLogar.firstElementChild.style.borderRadius = "0px 50px 50px 0px"; 
+        },1500)
         resetForms(paginaCriar);
         paginaCriar.setAttribute("id", "open");
     }
