@@ -48,7 +48,7 @@ input{
         border-radius: 0px 50px 50px 0px;
         box-shadow: -5px 0px 50px rgba(0, 0, 0, 0.406);
     }
-
+    
     100%{
         border-radius: 50px 0px 0px 50px;
         transform: translateX(-100%);
