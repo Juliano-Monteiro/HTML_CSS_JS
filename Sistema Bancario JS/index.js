@@ -176,6 +176,12 @@ const verificaValidadeCPF = ()=>{
     }
 }
 //
+////
+const validaEmail = (email)=>{
+    const regex = /^[^\s]+@[^\s]+\.[^\s]+$/; // Para pegar o email por partes
+    return regex.test(email); // faz um test se esta no padrão regex informado acima
+}
+//
 //// - Função que cria uma conta
 const criarConta = () => {
     let nome = document.querySelector("#nome").value;
@@ -194,7 +200,7 @@ const criarConta = () => {
         //
         //// - Numero aleatorio para o codigo da conta 
         const codigo = Math.floor(Math.random() * (10000000 - 1000000) + 1000000);
-        if (camposVazios(".dadosInput") == 0 && verificaPossibilidadeCadastral(cpf, email) == 0&&verificaValidadeCPF()==true) {
+        if (camposVazios(".dadosInput") == 0 && verificaPossibilidadeCadastral(cpf, email) == 0&&verificaValidadeCPF()==true&&validaEmail(email)==true) {
             let dados = { nome, cpf, email, data, salario, senha, saldo, codigo, chavesPix};
             contas.push(dados);
             resetForms(paginaCriar);
