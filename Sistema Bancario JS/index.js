@@ -213,7 +213,7 @@ const criarConta = () => {
         }
     }
 }
-//
+////
 //// - Função que executa e entrada na conta cadastrada
 const logarConta = (email, senha) => {
     let contaEncontrada = false;
