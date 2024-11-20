@@ -38,7 +38,7 @@ linkCriarConta.addEventListener("click", () => {
         
     }
 });
-// -oi
+//
 //// - botão que fica resposavel por levar o usuario para a pagina de logar na conta
 linkLogar.addEventListener("click", () => {
     if (paginaLogar.getAttribute("id") == "open") {
@@ -101,6 +101,81 @@ const verificaPossibilidadeCadastral = (cpf, email) => {
     return retorno;
 }
 //
+//// - Verifica se o valor presente no campo cpf é realmente um cpf
+let num_cpf="",aux=0;
+let eventKeyCPF = document.querySelector("#cpf");
+eventKeyCPF.addEventListener("input",()=>{
+    let valor = eventKeyCPF.value.replace(/\D/g, '');// - A expressão regular /\D/g foi usada para remover qualquer caractere que não seja um número.    
+    if(valor.length<=3){
+        eventKeyCPF.value = valor;
+    }
+    else if (valor.length <= 6) {
+        eventKeyCPF.value = valor.replace(/(\d{3})(\d{0,3})/, '$1.$2'); // Exemplo: 123456 -> 123.456
+    } else if (valor.length <= 9) {
+        eventKeyCPF.value = valor.replace(/(\d{3})(\d{3})(\d{0,3})/, '$1.$2.$3'); // Exemplo: 123456789 -> 123.456.789
+    } else {
+        eventKeyCPF.value = valor.replace(/(\d{3})(\d{3})(\d{3})(\d{0,3})/, '$1.$2.$3-$4'); // Para mais de 9 dígitos
+    }
+})
+const func_num_verificador_1 = ()=>{
+    let pesos=10,aux=0;
+    for(let i=0;i<num_cpf.length;i++){
+        if(pesos>=2){
+            aux+=parseInt(num_cpf[i])*pesos;
+        }
+        pesos--;
+    }
+    if(aux%11!=0&&aux%11!=1){
+        return 11-(aux%11);
+    }
+    else{
+        return 0;
+    }
+}
+const func_num_verificador_2 = ()=>{
+    let pesos=11,aux=0;
+    for(let i=0;i<num_cpf.length;i++){
+        if(pesos>=2){
+            aux+=parseInt(num_cpf[i])*pesos;
+        }
+        pesos--;
+    }
+    if(aux%11!=0&&aux%11!=1){
+        return 11-(aux%11);
+    }
+    else{
+        return 0;
+    }
+}
+const verificaValidadeCPF = ()=>{
+    if(eventKeyCPF.value.length==14){
+        num_cpf="";
+        let num_verificador_1=0,num_verificador_2=0;
+        for(let i in eventKeyCPF.value){
+            if(eventKeyCPF.value[i]!="."&&eventKeyCPF.value[i]!="-"&&i<eventKeyCPF.value.length-2){
+                num_cpf+=eventKeyCPF.value[i];
+            }
+        }
+        num_verificador_1 = func_num_verificador_1();
+        num_cpf+=num_verificador_1;
+        num_verificador_2 = func_num_verificador_2();
+        console.log(num_verificador_1);
+        console.log(num_verificador_2);
+        if(eventKeyCPF.value[13]==num_verificador_2&&eventKeyCPF.value[12]==num_verificador_1){
+            alert("CPF VALIDO!!!!!");
+            return true;
+        }
+        else{
+            alert("CPF InVaLiDo!");
+            return false;
+        }
+    }
+    else{
+        alert("CPF incompleto!");
+        return false;
+    }
+}
+//
 //// - Função que cria uma conta
 const criarConta = () => {
     let nome = document.querySelector("#nome").value;
@@ -119,13 +194,16 @@ const criarConta = () => {
         //
         //// - Numero aleatorio para o codigo da conta 
         const codigo = Math.floor(Math.random() * (10000000 - 1000000) + 1000000);
-        if (camposVazios(".dadosInput") == 0 && verificaPossibilidadeCadastral(cpf, email) == 0) {
+        if (camposVazios(".dadosInput") == 0 && verificaPossibilidadeCadastral(cpf, email) == 0&&verificaValidadeCPF()==true) {
             let dados = { nome, cpf, email, data, salario, senha, saldo, codigo, chavesPix};
             contas.push(dados);
             resetForms(paginaCriar);
             alert("Conta criada!");
             console.table(dados);
             console.table(contas);
+        }
+        else{
+            alert("Existe algum campo errado ou com ausencia de informações");
         }
     }
 }
