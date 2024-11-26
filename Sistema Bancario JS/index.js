@@ -1,4 +1,30 @@
 //
+//// - Função que deixa os campos de valores monetarios em um padrão
+const camposCapital = document.querySelectorAll(".inputCampoDinheiro");
+
+camposCapital.forEach((e) => {
+    e.addEventListener("input", () => {
+        let valor = e.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+
+        if (valor.length === 1) {
+            // Se o valor tiver 1 dígito, formata como '00,0X'
+            e.value = '00,0' + valor;
+        } else if (valor.length === 2) {
+            // Se o valor tiver 2 dígitos, formata como '00,XX'
+            e.value = '00,' + valor;
+        } else if (valor.length > 2) {
+            // Se o valor tiver mais de 2 dígitos, remove zeros à esquerda
+            valor = valor.replace(/^0+/, ''); // Remove zeros à esquerda
+            // Adiciona a vírgula antes dos dois últimos dígitos
+            valor = valor.replace(/(\d+)(\d{2})$/, '$1,$2');
+            e.value = valor;
+        }
+    });
+});
+
+
+
+//
 //// - Array de objetos das contas bancarias
 let contas = [];
 //
@@ -88,6 +114,7 @@ const camposVazios = (container) => {
     });
     return campVazios;
 }
+
 //
 //// - Verifica se é possivel cadastrar uma nova conta com esses dados, ele olha o array e vê se já existe alguma conta cadastrada com os mesmos valores 
 const verificaPossibilidadeCadastral = (cpf, email) => {
@@ -221,7 +248,9 @@ const logarConta = (email, senha) => {
         if (e.email == email && e.senha == senha) {
             document.querySelector(".containerConta").setAttribute("id", "");
             document.querySelector(".containerFormulario").setAttribute("id", "open");
-            document.querySelector(".nomeConta").firstElementChild.innerHTML = e.nome;
+            let nome = e.nome;
+            nome = nome.split(' ');
+            document.querySelector(".nomeConta").firstElementChild.innerHTML = nome[0];
             document.querySelector(".valorConta").firstElementChild.innerHTML = e.saldo;
             resetForms(paginaLogar);
             elementoLogado = e;
@@ -258,10 +287,11 @@ document.querySelector(".depositar").addEventListener("click", () => {
 //
 //// - Botão que deposita o valor inserido 
 document.querySelector(".btnDepositar").addEventListener("click", () => {
+    document.querySelector("#valorDepositar").value = document.querySelector("#valorDepositar").value.replace(',','.');
     let valor = parseFloat(document.querySelector("#valorDepositar").value);
     if (!isNaN(valor)) {
         elementoLogado.saldo += valor;
-        document.querySelector(".valorConta").firstElementChild.innerHTML = elementoLogado.saldo; // ---> Mostra o novo valor da conta no header
+        document.querySelector(".valorConta").firstElementChild.innerHTML = elementoLogado.saldo.toFixed(2); // ---> Mostra o novo valor da conta no header
     }
 
 });
@@ -274,10 +304,11 @@ document.querySelector(".sacar").addEventListener("click", () => {
 //
 //// - Botão que sacar o valor inserido
 document.querySelector(".btnSacar").addEventListener("click", () => {
+    document.querySelector("#valorSacar").value = document.querySelector("#valorSacar").value.replace(',','.');
     let valor = parseFloat(document.querySelector("#valorSacar").value);
     if (!isNaN(valor)) {
         elementoLogado.saldo -= valor;
-        document.querySelector(".valorConta").firstElementChild.innerHTML = elementoLogado.saldo;
+        document.querySelector(".valorConta").firstElementChild.innerHTML = elementoLogado.saldo.toFixed(2);
     }
 });
 //
@@ -289,11 +320,12 @@ document.querySelector(".transferir").addEventListener("click", () => {
 //
 //// - Botão que transfere o valor inserido
 document.querySelector(".btnTransfer").addEventListener("click", () => {
+    document.querySelector("#valorTransfer").value = document.querySelector("#valorTransfer").value.replace(',','.');
     let valor = parseFloat(document.querySelector("#valorTransfer").value);
     let codigoPesquisado = document.querySelector("#codigoContaPesquisado").value;
     if (!isNaN(valor)) {
         elementoLogado.saldo -= valor;
-        document.querySelector(".valorConta").firstElementChild.innerHTML = elementoLogado.saldo;
+        document.querySelector(".valorConta").firstElementChild.innerHTML = elementoLogado.saldo.toFixed(2);
         contas.forEach((e) => {
             if (codigoPesquisado == e.codigo) {
                 e.saldo += valor;
@@ -521,11 +553,12 @@ document.querySelectorAll(".btnTypekeyInserted").forEach(e => {
                         document.querySelector(".btnPagarPix").replaceWith(document.querySelector(".btnPagarPix").cloneNode(true));
 
                         document.querySelector(".btnPagarPix").addEventListener("click", () => {
+                            document.querySelector("#valorDoPix").value = document.querySelector("#valorDoPix").value.replace(',','.');
                             let valorDoPix = parseFloat(document.querySelector("#valorDoPix").value);
                             if (!isNaN(valorDoPix) && elementoLogado.saldo >= valorDoPix) {
                                 elementoLogado.saldo -= valorDoPix;
                                 conta.saldo += valorDoPix;
-                                document.querySelector(".valorConta").firstElementChild.innerHTML = elementoLogado.saldo;
+                                document.querySelector(".valorConta").firstElementChild.innerHTML = elementoLogado.saldo.toFixed(2);
                                 alert("Pix realizado com sucesso!");
                             } else {
                                 alert("Saldo insuficiente ou valor inválido");
@@ -634,6 +667,7 @@ for(let i in btnsPopup){
         if(i==4){document.querySelector("#senhaPopup").disabled = false;}
     });
 }
+
 
 
 

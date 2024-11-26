@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Banco JMS</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsividade.css">
 </head>
 <body>
     <div class="popup" id="open">
@@ -90,7 +91,7 @@
             <div  class="depositarConta" id="open">
                 <p class="titulo">Depositar dinheiro na sua conta</p>
                 <div class="campoDinheiro">
-                    R$ <input type="number" placeholder="00.00" id="valorDepositar">
+                    R$ <input type="text" class="input_numeber inputCampoDinheiro"  placeholder="00.00" id="valorDepositar">
                 </div>
                 <button type="button" class="buttonStyle btnDepositar">Depositar</button>
                 <button type="button" class="btnClosePage" id="closeDepositar">Voltar</button>
@@ -98,7 +99,7 @@
             <div  class="sacarConta" id="open">
                 <p class="titulo">Sacar dinheiro na sua conta</p>
                 <div class="campoDinheiro">
-                    R$ <input type="number" placeholder="00.00" id="valorSacar">
+                    R$ <input type="text" class="input_numeber inputCampoDinheiro"  placeholder="00.00" id="valorSacar">
                 </div>
                 <button type="button" class="buttonStyle btnSacar">Sacar</button>
                 <button type="button" class="btnClosePage" id="closeSacar">Voltar</button>
@@ -107,10 +108,10 @@
                 <p class="titulo">Transferir dinheiro</p>
                 <div class="campoDadosTransferido">
                     <label for="codigo">Codigo da Conta</label>
-                    <input type="number" placeholder="000342452" id="codigoContaPesquisado">
+                    <input type="number" class="input_numeber" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"  placeholder="000342452" id="codigoContaPesquisado">
                 </div>
                 <div class="campoDinheiro">
-                    R$ <input type="number" placeholder="00.00" id="valorTransfer">
+                    R$ <input type="text" class="input_numeber inputCampoDinheiro"  placeholder="00.00" id="valorTransfer">
                 </div>
                 <button type="button" class="buttonStyle btnTransfer">Transferir</button>
                 <button type="button" class="btnClosePage" id="closeTransferir">Voltar</button>
@@ -170,7 +171,7 @@
                 <div  class="pagarPorPixFinal" id="open">
                     <p class="titulo">Insira o valor</p>
                     <div class="campoDinheiro">
-                        R$ <input type="number" placeholder="00.00" id="valorDoPix">
+                        R$ <input type="text" class="input_numeber inputCampoDinheiro"  placeholder="00.00" id="valorDoPix">
                     </div>
                     <p class="nomePessoaPix">Juliano Monteiro e Silva</p>
                     <button type="button" class="buttonStyle btnPagarPix">Pagar</button>

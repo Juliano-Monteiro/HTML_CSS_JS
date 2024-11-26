@@ -1,0 +1,40 @@
+@media(width<=1540px){
+    .pixPageCriarChave{
+        width: 80%;
+        gap: 10px;
+    }
+    .pixPageCriarChave button{
+        width: 50%;
+    }
+}
+@media(width<=1300px){
+    .subBlocoOpcPix{
+        width: 100%;
+    }
+    .subBlocoOpcPix>div{
+        font-size: 12pt;
+        letter-spacing: 1px;
+    }
+}
+@media(width<=1000px){
+    .pixPageCriarChave p{
+        font-size: 15pt;
+    }
+    .dadosInput2{
+        width: 80%;
+    }
+    .subBlocoOpcPix{
+        width: 100%;
+    }
+    .subBlocoOpcPix>div{
+        font-size: 12pt;
+        letter-spacing: 1px;
+    }
+    .linkPix>img{
+        width: auto;
+        height: 20px;
+    }
+    .pixPage{
+        width: 80%;
+    }
+}
