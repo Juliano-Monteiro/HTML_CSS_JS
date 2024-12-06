@@ -1,26 +1,59 @@
 //
 //// - Função que deixa os campos de valores monetarios em um padrão
 const camposCapital = document.querySelectorAll(".inputCampoDinheiro");
+const arrayNumbersCapital = ['0','1','2','3','4','5','6','7','8','9',',','.'];
+let digitados = '';
+camposCapital.forEach((elemento)=>{
+    elemento.addEventListener('click',()=>{
+        elemento.addEventListener("keydown", (event) => {
+            event.preventDefault();
+            if(arrayNumbersCapital.includes(event.key)){
+                elemento.value+=event.key;
+                digitados+=event.key;
+                console.log(elemento.value,elemento.value.length);
+                if(elemento.value.length==1){
+                    console.log("Digitados:"+digitados);
+                    elemento.value = '00,0'+digitados;
+                }
+                if(digitados.length==2){
+                    console.log("Digitados:"+digitados);
+                    elemento.value = '00,'+digitados;
+                }
+                if (digitados > 2) {
+                    // Se o valor tiver mais de 2 dígitos, remove zeros à esquerda
+                    digitados = digitados.replace(/^0+/, ''); // Remove zeros à esquerda
+                    // Adiciona a vírgula antes dos dois últimos dígitos
+                    digitados = digitados.replace(/(\d+)(\d{2})$/, '$1,$2');
+                    elemento.value = digitados;
+                }
+            }
+            if(event.key=='Backspace'){
+                elemento.value = elemento.value.slice(0,-1);
+                digitados=digitados.slice(0,-1);
+            }
+            
+        });
+    })
+})
+// camposCapital.forEach((e) => {
+//     e.addEventListener("input", () => {
+//         let valor = e.value.replace(/\D/g, ''); // Remove caracteres não numéricos
 
-camposCapital.forEach((e) => {
-    e.addEventListener("input", () => {
-        let valor = e.value.replace(/\D/g, ''); // Remove caracteres não numéricos
-
-        if (valor.length === 1) {
-            // Se o valor tiver 1 dígito, formata como '00,0X'
-            e.value = '00,0' + valor;
-        } else if (valor.length === 2) {
-            // Se o valor tiver 2 dígitos, formata como '00,XX'
-            e.value = '00,' + valor;
-        } else if (valor.length > 2) {
-            // Se o valor tiver mais de 2 dígitos, remove zeros à esquerda
-            valor = valor.replace(/^0+/, ''); // Remove zeros à esquerda
-            // Adiciona a vírgula antes dos dois últimos dígitos
-            valor = valor.replace(/(\d+)(\d{2})$/, '$1,$2');
-            e.value = valor;
-        }
-    });
-});
+//         if (valor.length === 1) {
+//             // Se o valor tiver 1 dígito, formata como '00,0X'
+//             e.value = '00,0' + valor;
+//         } else if (valor.length === 2) {
+//             // Se o valor tiver 2 dígitos, formata como '00,XX'
+//             e.value = '00,' + valor;
+//         } else if (valor.length > 2) {
+//             // Se o valor tiver mais de 2 dígitos, remove zeros à esquerda
+//             valor = valor.replace(/^0+/, ''); // Remove zeros à esquerda
+//             // Adiciona a vírgula antes dos dois últimos dígitos
+//             valor = valor.replace(/(\d+)(\d{2})$/, '$1,$2');
+//             e.value = valor;
+//         }
+//     });
+// });
 
 
 
@@ -51,14 +84,16 @@ linkCriarConta.addEventListener("click", () => {
     
     if (paginaCriar.getAttribute("id") == "open") {
         paginaCriar.setAttribute("id", "");
-        paginaCriar.firstElementChild.setAttribute("class", "sub_form animado1");
-        setTimeout(()=>{
-            paginaCriar.firstElementChild.style.transform = "translateX(-100%)"; 
-            paginaLogar.firstElementChild.style.transform = "translateX(-100%)"; 
-            paginaCriar.firstElementChild.style.boxShadow = "-5px 0px 50px rgba(0, 0, 0, 0.406)"; 
-            paginaLogar.firstElementChild.style.boxShadow = "-5px 0px 50px rgba(0, 0, 0, 0.406)"; 
-            paginaCriar.firstElementChild.style.borderRadius = "50px 0px 0px 50px"; 
-        },1500)
+        if(window.innerWidth>487){
+            paginaCriar.firstElementChild.setAttribute("class", "sub_form animado1");
+            setTimeout(()=>{
+                paginaCriar.firstElementChild.style.transform = "translateX(-100%)"; 
+                paginaLogar.firstElementChild.style.transform = "translateX(-100%)"; 
+                paginaCriar.firstElementChild.style.boxShadow = "-5px 0px 50px rgba(0, 0, 0, 0.406)"; 
+                paginaLogar.firstElementChild.style.boxShadow = "-5px 0px 50px rgba(0, 0, 0, 0.406)"; 
+                paginaCriar.firstElementChild.style.borderRadius = "50px 0px 0px 50px"; 
+            },1500);
+        }
         resetForms(paginaLogar);
         paginaLogar.setAttribute("id", "open");
         
@@ -67,16 +102,19 @@ linkCriarConta.addEventListener("click", () => {
 //
 //// - botão que fica resposavel por levar o usuario para a pagina de logar na conta
 linkLogar.addEventListener("click", () => {
+
     if (paginaLogar.getAttribute("id") == "open") {
         paginaLogar.setAttribute("id", "");
-        paginaLogar.firstElementChild.setAttribute("class", "sub_form animado2");
-        setTimeout(()=>{
-            paginaCriar.firstElementChild.style.transform = "translateX(0%)"; 
-            paginaLogar.firstElementChild.style.transform = "translateX(0%)";
-            paginaCriar.firstElementChild.style.boxShadow = "5px 0px 50px rgba(0, 0, 0, 0.617)"; 
-            paginaLogar.firstElementChild.style.boxShadow = "5px 0px 50px rgba(0, 0, 0, 0.617)"; 
-            paginaLogar.firstElementChild.style.borderRadius = "0px 50px 50px 0px"; 
-        },1500)
+        if(window.innerWidth>487){
+            paginaLogar.firstElementChild.setAttribute("class", "sub_form animado2");
+            setTimeout(()=>{
+                paginaCriar.firstElementChild.style.transform = "translateX(0%)"; 
+                paginaLogar.firstElementChild.style.transform = "translateX(0%)";
+                paginaCriar.firstElementChild.style.boxShadow = "5px 0px 50px rgba(0, 0, 0, 0.617)"; 
+                paginaLogar.firstElementChild.style.boxShadow = "5px 0px 50px rgba(0, 0, 0, 0.617)"; 
+                paginaLogar.firstElementChild.style.borderRadius = "0px 50px 50px 0px"; 
+            },1500);
+        }
         resetForms(paginaCriar);
         paginaCriar.setAttribute("id", "open");
     }
@@ -460,9 +498,7 @@ for (let i = 0; i <= 2; i++) {
 }
 //
 //// - Botão que chama a função de criar uma chave Pix
-document.querySelector("#cadastrarPix").addEventListener("click", () => {
-    criarChavePix();
-});
+document.querySelector("#cadastrarPix").addEventListener("click",criarChavePix);
 //
 //// - Cria uma página que mostra todas as chaves Pix cadastradas naquela conta
 document.querySelector(".minhasChaves").addEventListener("click", () => {

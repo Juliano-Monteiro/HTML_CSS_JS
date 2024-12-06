@@ -38,3 +38,331 @@
         width: 80%;
     }
 }
+@media(width<=400px){
+    /*
+     - Header
+    */
+    .headerConta{
+        width: 100%;
+        height: 80px;
+        font-size: 15px;
+        
+    }
+    .outros{
+        width: 100%;
+        flex-wrap: no-wrap;
+    }
+    .logo{
+        width: 60%;
+        font-size: 10pt;
+    }
+    .olho,.perfil{
+        width: 25px;
+        margin: 0px 10px;
+    }
+    .valorConta{
+        font-size: 16pt;
+        color: #032B43;
+    }
+    .olho>img,.perfil>img{
+        width: 100%;
+        height: 100%;
+    }
+    .logout{
+        padding: 5px 15px;
+        font-size: 8pt;
+        border-radius: 3px;
+    }
+    .nomeConta{
+        display: none;
+    }
+    .valorConta{
+        
+        font-size: 16px;
+    }
+    .outros{
+        justify-content: end;
+    }
+    /*
+     - Campo de operações bancarias
+    */
+    .bodyContaContainer{
+        margin-top: 20%;
+    }
+    .bodyConta{   
+        width: fit-content;
+        height: fit-content;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+    .bloco{
+        width: 150px;
+        height: 150px;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 3px 3px 20px rgba(114, 114, 114, 0.377);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+    .nomesIcons{
+        margin-top: 10px;
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: capitalize;
+        letter-spacing: 1px;
+    }
+    .bloco>img{
+        width: 60px;
+        height: 60px;
+        border-radius: 0px;
+    }
+    .bloco:hover{
+        box-shadow: 5px 5px 20px rgba(33, 33, 33, 0.377);
+    }
+    .titulo{
+        font-size: 12pt;
+        letter-spacing: 1px;
+    }
+    .depositarConta,.sacarConta,.transferirConta{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 30%;
+        gap: 10px;
+    }
+    .buttonStyle,.btnClosePage{
+        font-size: 12px;
+        width: 80%;
+        border-radius: 2px;
+    }
+    .campoDinheiro{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14pt;
+    }
+    .campoDinheiro>input{
+        font-size: 16pt;
+        box-shadow: 3px 3px 5px rgba(84, 84, 84, 0.205);
+    }
+    .transferirConta{
+        margin-top: 25%;
+    }
+    .campoDadosTransferido>label{
+        margin-top: 20px;
+        letter-spacing: 1px;
+        font-size: 13px;
+    }
+    .campoDadosTransferido>input{
+        font-size: 16pt;
+        box-shadow: 3px 3px 5px rgba(84, 84, 84, 0.205);
+    }
+    .pixPage{
+        margin-top: 30%;
+        width: 100%;
+        gap: 15px;
+    }
+    .pixPagar, .pixReceber{
+        padding: 12px;
+    }
+    .subBlocoOpcPix{
+        gap: 10px;
+    }
+    .subBlocoOpcPix>div{
+        margin: 10px 0px;
+        font-size: 10pt;
+        letter-spacing: 1px;
+    }
+    .PagarPix, .pagarPorPixFinal{
+        margin-top: 20%;
+        width: 80%;
+        gap: 10px;
+    }
+    .tipoChaveInserida{
+        gap:10px;
+        width: 100%;
+        height: 100%;
+    }
+    .tipoChaveInserida button{
+        width: 100%;
+        padding: 10px;
+        font-size: 12pt;
+        letter-spacing: 1px;
+    }
+    .inserirChave{
+        margin-top: 20%;
+        width: 100%;
+        gap: 10px;
+    }
+    #chavePesquisada{
+        width: 80%;
+        font-size: 12pt;
+        box-shadow: 3px 3px 5px rgba(84, 84, 84, 0.329);
+    }
+
+    .pixPageCriarChave{
+        margin-top: 20%;
+        width: 80%;
+        gap: 10px;
+    }
+    .pixPageCriarChave>.titulo{
+        width: 120%;
+        text-align: center;
+        font-size: 10pt;
+        margin-bottom: 20px;
+    }
+    .pixPageCriarChave>.buttonStyle,.pixPageCriarChave>.btnClosePage{
+        width: 100%;
+    }
+    .opcTypeKey{
+        gap: 10px;
+    }
+    .opcTypeKey div{
+        gap: 6px;
+        height: 100%;
+    }
+    .opcTypeKey div>label{
+        font-size: 10pt;
+    }
+    .opcTypeKey div>input{
+        width: 16px;
+        height: 16px;
+    }
+    #NovaChave{
+        width: 100%;
+        font-size: 12pt;
+        box-shadow: 3px 3px 5px rgba(84, 84, 84, 0.281);
+        margin: 15px 0px;
+    }
+
+
+
+    .labelPopup{
+        font-size: 10pt;
+        letter-spacing: 1px;
+    }
+    .popup{
+        position: absolute;
+        padding: 20px;
+        width: 90%;
+        height: fit-content;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 5px 5px 20px rgba(80, 80, 80, 0.582);
+    }
+    .inputsPopup{
+        margin: 0;
+        background-color: rgb(221, 221, 221);
+        border: none;
+        padding: 10px;
+        font-size: 8pt;
+        letter-spacing: 1px;
+        width: 100%;
+    }
+    .btneditar{
+        width: 20%;
+        height: 40px;
+        padding: 8px;
+    }
+    .SalvarAlteracoes{
+        border-radius: 2px;
+    }
+    .blocoClosePopup{
+        width: 100%;
+    }
+    .blocoClosePopup>img{
+        width: 12px;
+    }
+    .img_form{
+        display: none;
+    }
+    .sub_form{
+        width: 100%;
+        top: 10%;   
+        height: 80%;
+        padding: 0px;
+        border-radius:20px; 
+    }
+    .sub_form label{
+        margin-left: 5px;
+        font-size: 0.8rem;
+        letter-spacing: 0.1rem;
+        margin-bottom: 0.2rem;
+    }
+
+    #pag_cadastro input{
+        padding: 0.5rem;
+        font-size: 9pt;
+        letter-spacing: 0.1rem;
+        margin-bottom: 0.5rem;
+    }
+    #pag_cadastro label{
+        margin-left: 5px;
+        font-size: 10pt;
+        letter-spacing: 0.1rem;
+        margin-bottom: 0rem;
+    }
+    .sub_form input{
+        padding: 10px;
+        width: 100%;
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
+        margin-bottom: 1rem;
+    }
+    .bloco_form_campos{
+        width:80%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+    .div_formulario{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        border-radius: 50px;
+        box-shadow: 10px 12px 30px -10px rgba(56, 56, 56, 0.42);
+    }
+    .link{
+        margin: auto;
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
+    
+        margin-top: 1rem;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+    }
+    #entrarSistema{
+        margin-top: 0.5rem;
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
+        padding: 0rem;
+        width: 100%;
+        height: 3rem;
+        border-radius: 0.2rem;
+        background-color: #032B43;
+        color: #FFFBFC;
+        transition: .3s all ease-in-out;
+        cursor: pointer;
+        box-shadow: 5px 5px 20px -10px rgba(0, 0, 0, 0.554);
+    }
+    #criarConta{
+        margin-top: 0.5rem;
+        font-size: 0.9rem;
+        letter-spacing: 0.1rem;
+        padding: 0rem;
+        width: 100%;
+        height: 2.5rem;
+        border-radius: 0.2rem;
+        background-color: #032B43;
+        color: #FFFBFC;
+        transition: .3s all ease-in-out;
+        cursor: pointer;
+        box-shadow: 5px 5px 20px -10px rgba(0, 0, 0, 0.554);
+    }
+}
