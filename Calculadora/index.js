@@ -1,3 +1,4 @@
+import { calculate } from './calculate.js';
 const calculadora =  document.querySelector(".calculadora");
 const root = document.querySelector(":root");
 const input = document.querySelector("#input_entrada");
@@ -18,13 +19,7 @@ input.addEventListener("keydown",(ev)=>{
         calculate();
     }
 })
-const calculate = ()=>{
-    saida.innerHTML = 'ERROR';
-    saida.classList.add("error");
-    const result = eval(input.value);//Essa função eval executa um codigo JS, nesse caso estamos usando ela para fazer calculos matematicos como se fosse no console 
-    saida.innerHTML = result;
-    saida.classList.remove("error");
-}
+
 document.querySelectorAll(".charKey").forEach((charkeyBtn)=>{
     charkeyBtn.addEventListener("click",()=>{
         const value = charkeyBtn.dataset.value //Dataset é para conseguir acessar os atributos do tipo data 
